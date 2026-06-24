@@ -1,0 +1,177 @@
+.episilion-services-header {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgb(1, 0, 0) 0px,
+      rgba(3, 2, 2, 0.1) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(to bottom, rgba(11, 11, 16, 0.6), #0a0b0c);
+  background-color: rgb(19 19 27 / 0.6);
+  box-shadow: 0px 15px 20px -10px rgba(0, 213, 255, 0.224);
+}
+
+.episilion-services-header > p:first-child {
+  font-family: Space-Grotesk;
+  font-size: clamp(20px, 2vw, 20px);
+
+  /* Font styling to match the technical, geometric look */
+  font-weight: 900;
+  text-transform: uppercase;
+
+  /* Tight letter spacing to mimic the squished look */
+  letter-spacing: -1px;
+
+  /* The metallic text gradient effect */
+  background: linear-gradient(to bottom, #dbe9f6 0%, #a2b7ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* Background container color to make it pop like the image */
+  background-color: #0d0f14;
+  padding: 10px;
+}
+.episilion-services-header-resume,
+.episilion-services-header-mobile-resume {
+  font-family: JetBrainsMono;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: rgb(0 242 255 / var(--tw-bg-opacity, 1));
+  color: rgba(0, 0, 0, 0.712);
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(1, 0, 0, 0.397) 0px,
+      rgba(3, 2, 2, 0.1) 0.5px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(to bottom, rgb(0 242 255), rgb(0 242 255));
+}
+.episilion-services-header-homepage-links,
+.episilion-services-header-mobile-homepage-links {
+  display: flex;
+  gap: 30px;
+  font-family: JetBrainsMonoLight;
+  color: #dbe9f6;
+}
+
+@media only screen and (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+  .episilion-services-header-mobile-homepage-links {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .episilion-services-header {
+    justify-content: space-between;
+  }
+  .episilion-services-header-homepage-links {
+    display: none;
+  }
+  .episilion-services-header-resume {
+    display: none;
+  }
+  .hamburger {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    cursor: pointer;
+    /* border: solid red; */
+  }
+  .hamburger:active {
+    background: none;
+    border: none;
+  }
+
+  .hamburger span {
+    width: 28px;
+    height: 3px;
+    background: linear-gradient(to bottom, rgba(0, 242, 255, 0.45), rgb(0, 242, 255));;
+
+    transition: all 0.3s ease;
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .episilion-services-header-mobile-homepage-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background: rgba(16, 16, 16, 0.15); /* semi-transparent white */
+    backdrop-filter: blur(10px); /* the "frosted glass" effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  .episilion-services-header-mobile-homepage-links.close {
+    display: none;
+  }
+
+  .episilion-services-header-mobile-homepage-links p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+  }
+
+  .episilion-services-header-mobile-homepage-links p:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .episilion-services-header-mobile-homepage-links p:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  .episilion-services-header-mobile-homepage-links p:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .episilion-services-header-mobile-homepage-links p:nth-child(4) {
+    animation-delay: 0.5s;
+  }
+  .episilion-services-header-mobile-homepage-links p:nth-child(5) {
+    animation-delay: 0.6s;
+  }
+  .episilion-services-header-mobile-homepage-links p:nth-child(6) {
+    animation-delay: 0.8s;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
