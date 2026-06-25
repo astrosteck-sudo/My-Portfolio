@@ -27,7 +27,7 @@ body {
     /* Horizontal scanlines */
     linear-gradient(rgba(18, 24, 38, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
     /* Vertical grid lines */
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.032) 1px, transparent 1px),
     /* Horizontal grid lines */
     linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 

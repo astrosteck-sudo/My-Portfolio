@@ -48,7 +48,7 @@
 
   padding: 10px;
   padding-right: 0;
-  
+
   font-family: JetBrainsMonolight;
   word-spacing: 0px;
 }
@@ -57,7 +57,6 @@
   width: 300px;
   height: 300px; /* fixed — never changes */
   overflow: hidden;
-  
 }
 
 .homepage-opening-image img {
@@ -70,10 +69,13 @@
 }
 
 @keyframes reveal-up {
-  from { clip-path: inset(100% 0 0 0); }
-  to   { clip-path: inset(0% 0 0 0); }
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0% 0 0 0);
+  }
 }
-
 
 .homepage-opening-image img {
   width: 100%;
@@ -109,8 +111,8 @@
   font-weight: bolder;
   color: #00d4ff; /* Glow color */
   animation: fade-blink 0.8s infinite;
-  font-size: 1.5rem;   /* makes the | taller */
-  line-height: 1;    /* keeps it aligned neatly */
+  font-size: 1.5rem; /* makes the | taller */
+  line-height: 1; /* keeps it aligned neatly */
 }
 
 @keyframes fade-blink {
@@ -126,5 +128,126 @@
 @media only screen and (max-width: 992px) {
   .homepage-opening h2 {
     font-size: 30px;
+  }
+}
+
+/* .short-description-container{
+  border: solid red;
+} */
+
+.short-description-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 in a row on large screens */
+  gap: 30px; /* spacing between items */
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-bottom: 50px;
+  margin-top: 80px;
+}
+
+.short-description-container div {
+  background-color: rgb(13, 13, 21);
+  padding: 12px;
+  text-align: center;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid red;
+}
+
+/* Container to handle the dark grid background */
+.hud-container {
+  font-family: monospace; /* Matches the tech font style */
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 in a row on large screens */
+
+  gap: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-bottom: 50px;
+  margin-top: 80px;
+}
+
+/* The main box with the thin border */
+.hud-card {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background-color: rgba(14, 18, 28, 0.8);
+  /* The thin, dark cyan boundary line */
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  box-sizing: border-box;
+}
+
+/* Base styles for the thick corner accents */
+.corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+}
+
+/* Top-Left Cyan Corner */
+.corner.top-left {
+  top: -4px;
+  left: -4px;
+  border-top: 3px solid #00f0ff;
+  border-left: 3px solid #00f0ff;
+}
+
+/* Bottom-Right White/Purple Corner */
+.corner.bottom-right {
+  bottom: -4px;
+  right: -4px;
+  border-bottom: 3px solid #00f0ff; /* Off-white color */
+  border-right: 3px solid #00f0ff;
+}
+
+/* Card internal spacing and typography */
+.hud-content {
+  padding: 20px 20px;
+}
+
+.hud-title {
+  color: #8a99ad;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-family: JetBrainsMonoLight;
+}
+
+.hud-value {
+  color: #e2e8f0;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: Space-Grotesk;
+}
+
+/* Mobile screens: 2 in a row */
+@media (max-width: 768px) {
+  .hud-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Extra small screens: 1 in a row */
+@media (max-width: 480px) {
+  .hud-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .hud-container {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
