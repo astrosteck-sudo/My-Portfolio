@@ -16,3 +16,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face{
+  font-family: "Inter";
+  src: url(./font-Styles/Inter/static/Inter_24pt-Light.ttf);
+  font-weight: normal;
+  font-style: normal;
+}

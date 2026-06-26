@@ -242,6 +242,82 @@
   }
 }
 
+.about-me-container {
+  padding-left: 140px;
+  margin-top: 100px;
+  padding-bottom: 20px;
+}
+
+.about-me {
+  width: 50%;
+}
+
+.about-me-header {
+  font-family: Space-Grotesk;
+  font-size: 2.5rem;
+  /* Font styling to match the technical, geometric look */
+  font-weight: 900;
+  /* Tight letter spacing to mimic the squished look */
+  letter-spacing: -1px;
+
+  /* The metallic text gradient effect */
+  background: linear-gradient(to bottom, #dbe9f6 0%, #a2b7ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 50px;
+  display: flex;
+  gap: 20px;
+}
+.about-me-header svg{
+  width: 40px;
+}
+
+.about-me-other-descriptions > div:first-child{
+  width: 30px;
+  height: 30px;
+}
+
+.about-me-description {
+  font-family: Inter;
+  font-size: clamp(18px, 2vw, 20px);
+  font-weight: bold;
+  /* Tight letter spacing to mimic the squished look */
+  letter-spacing: -1px;
+
+  /* The metallic text gradient effect */
+  color: rgba(162, 183, 202, 0.799);
+  margin-bottom: 50px;
+}
+.about-me-other-descriptions .hud-content{
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-me-other-descriptions{
+  display: flex;
+  gap: 20px;
+}
+
+.about-me-other-descriptions-p{
+  color: white;
+}
+
+.about-me-other-descriptions-p > p:first-child{
+  font-family: Space-Grotesk;
+  font-size: clamp(13px, 2vw, 20px);
+}
+.about-me-other-descriptions-p > p:last-child{
+  font-family: JetBrainsMonoLight;
+  font-size: clamp(10px, 2vw, 14px);
+  color: rgba(255, 255, 255, 0.427);
+  margin-bottom: 30px;
+}
+
+
 @media only screen and (max-width: 992px) {
   .hud-container {
     padding: 0px;
@@ -249,5 +325,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .about-me-container{
+    padding: 20px;
+  }
+  .about-me{
+    width: 100%;
+  }
+  .about-me-header{
+    font-size: 1.5rem;
+  }
+  .about-me-header svg{
+    width: 20px;
   }
 }
