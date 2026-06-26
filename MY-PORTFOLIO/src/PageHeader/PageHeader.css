@@ -111,7 +111,11 @@
   .hamburger span {
     width: 28px;
     height: 3px;
-    background: linear-gradient(to bottom, rgba(0, 242, 255, 0.45), rgb(0, 242, 255));;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 242, 255, 0.45),
+      rgb(0, 242, 255)
+    );
 
     transition: all 0.3s ease;
   }
@@ -132,9 +136,11 @@
     align-items: center;
     gap: 20px;
     padding: 15px;
-    background: rgba(16, 16, 16, 0.15); /* semi-transparent white */
-    backdrop-filter: blur(10px); /* the "frosted glass" effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: rgba(16, 16, 16, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    background: rgba(16, 16, 16, 0.85); /* fallback solid */
     border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     margin-top: 70px;
