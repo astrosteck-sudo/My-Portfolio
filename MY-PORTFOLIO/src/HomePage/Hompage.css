@@ -158,7 +158,8 @@
 }
 
 /* Container to handle the dark grid background */
-.hud-container, .about-me-skills-container {
+.hud-container,
+.about-me-skills-container {
   font-family: monospace; /* Matches the tech font style */
 
   display: grid;
@@ -170,16 +171,22 @@
   margin-bottom: 50px;
   margin-top: 80px;
 }
-.about-me-skills-header{
+.about-me-skills-header {
   padding-left: 150px;
   margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+.about-me-skills-header svg {
+  width: 50px;
 }
 
 /* The main box with the thin border */
-.hud-card, .about-me-skills-hud-card {
+.hud-card,
+.about-me-skills-hud-card {
   position: relative;
-  width: 300px;
-  height: 100px;
+  /* width: 300px;
+  height: 100px; */
   background-color: rgba(14, 18, 28, 0.8);
   /* The thin, dark cyan boundary line */
   border: 1px solid rgba(0, 240, 255, 0.15);
@@ -234,15 +241,21 @@
 
 /* Mobile screens: 2 in a row */
 @media (max-width: 768px) {
-  .hud-container, .about-me-skills-container {
-    grid-template-columns: repeat(2, 1fr);
+  .hud-container,
+  .about-me-skills-container {
+    /* 150px is the minimum width of an item. 1fr means take up remaining space. */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px; /* Thinner gaps to maximize horizontal space */
   }
 }
 
+
 /* Extra small screens: 1 in a row */
 @media (max-width: 480px) {
-  .hud-container, .about-me-skills-container {
-    grid-template-columns: 1fr;
+  .hud-container,
+  .about-me-skills-container {
+    grid-template-columns: repeat(2,1fr); /* Keeps the 2x2 structure on tiny phones */
+    gap: 15px; /* Optional: narrows gaps slightly so content fits on tiny screens */
   }
 }
 
@@ -256,7 +269,8 @@
   width: 50%;
 }
 
-.about-me-header,.about-me-skills-header {
+.about-me-header,
+.about-me-skills-header {
   font-family: Space-Grotesk;
   font-size: 2.5rem;
   /* Font styling to match the technical, geometric look */
@@ -273,11 +287,11 @@
   display: flex;
   gap: 20px;
 }
-.about-me-header svg{
+.about-me-header svg {
   width: 40px;
 }
 
-.about-me-other-descriptions > div:first-child{
+.about-me-other-descriptions > div:first-child {
   width: 30px;
   height: 30px;
 }
@@ -293,7 +307,7 @@
   color: rgba(162, 183, 202, 0.799);
   margin-bottom: 50px;
 }
-.about-me-other-descriptions .hud-content{
+.about-me-other-descriptions .hud-content {
   height: 100%;
   overflow: hidden;
   padding: 0;
@@ -301,73 +315,72 @@
   justify-content: center;
   align-items: center;
 }
-.about-me-other-descriptions{
+.about-me-other-descriptions {
   display: flex;
   gap: 20px;
 }
 
-.about-me-other-descriptions-p{
+.about-me-other-descriptions-p {
   color: white;
 }
 
-.about-me-other-descriptions-p > p:first-child{
+.about-me-other-descriptions-p > p:first-child {
   font-family: Space-Grotesk;
   font-size: 13px;
 }
-.about-me-other-descriptions-p > p:last-child{
+.about-me-other-descriptions-p > p:last-child {
   font-family: JetBrainsMonoLight;
   font-size: clamp(10px, 2vw, 14px);
   color: rgba(255, 255, 255, 0.427);
   margin-bottom: 30px;
 }
 
-.about-me-skills-container{
+.about-me-skills-container {
   margin-top: 0;
 }
 
-.about-me-skills-hud-card{
+.about-me-skills-hud-card {
   padding: 30px;
   height: 200px;
 }
 
-
-.about-me-skills-wrapper{
+.about-me-skills-wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.about-me-skills-svg-and-number{
+.about-me-skills-svg-and-number {
   height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.about-me-skills-svg-and-number svg{
+.about-me-skills-svg-and-number svg {
   width: 25px;
 }
-.about-me-skills-svg-and-number p{
+.about-me-skills-svg-and-number p {
   font-family: JetBrainsMono;
   color: rgba(255, 255, 255, 0.427);
   font-size: clamp(10px, 2vw, 12px);
 }
-.about-me-skills-wrapper h2{
+.about-me-skills-wrapper h2 {
   font-family: Space-Grotesk-Light;
   font-size: clamp(10px, 2vw, 12px);
   color: rgba(255, 255, 255, 0.728);
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   margin-bottom: 10px;
 }
-.about-me-skills-loader{
+.about-me-skills-loader {
   width: 100%;
   height: 5px;
   background-color: rgba(255, 255, 255, 0.854);
 }
 
-.about-me-skills-tools{
+.about-me-skills-tools {
   display: flex;
   gap: 20px;
 }
-.about-me-skills-tools div{
+.about-me-skills-tools div {
   border: solid rgba(208, 188, 255, 0.717) 1px;
   padding: 5px;
   color: rgb(208 188 255 / var(--tw-text-opacity, 1));
@@ -377,26 +390,33 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .hud-container, .about-me-skills-container {
-    padding: 0px;
-    display: flex;
+  .hud-container,
+  .about-me-skills-container {
+    padding: 10px;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
-  .about-me-container{
+  .about-me-skills-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .about-me-container {
     padding: 20px;
   }
-  .about-me{
+  .about-me {
     width: 100%;
   }
-  .about-me-header, .about-me-skills-header{
+  .about-me-header,
+  .about-me-skills-header {
     font-size: 1.5rem;
   }
-  .about-me-header svg{
+  .about-me-header svg {
     width: 20px;
   }
-  .about-me-skills-header{
+  .about-me-skills-header {
     padding-left: 30px;
   }
+
 }

@@ -177,9 +177,33 @@ export function Homepage() {
         </div>
       </div>
 
-      
       <div className="about-me-skills-main-container">
-        <h2 className="about-me-skills-header">SKILLS AND KNOWLEDGE</h2>
+        <h2 className="about-me-skills-header">
+          <svg
+            xmlns="http://w3.org"
+            viewBox="0 0 100 100"
+            width="100"
+            height="100"
+          >
+            <path
+              d="M 22,24 L 50,14 L 78,24 L 78,56 C 78,74 50,88 50,88 C 50,88 22,74 22,56 Z"
+              fill="none"
+              stroke="white"
+              stroke-width="4"
+              stroke-linejoin="round"
+            />
+
+            <path
+              d="M 38,50 L 47,59 L 64,36"
+              fill="none"
+              stroke="white"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>SKILLS AND KNOWLEDGE</p>
+        </h2>
         <div className="about-me-skills-container">
           <div className="about-me-skills-hud-card">
             <div class="corner top-left"></div>
@@ -471,7 +495,7 @@ export function Homepage() {
 
                 <p>[03]</p>
               </div>
-              <h2>BACKEND ARCHITECTURE (Web)</h2>
+              <h2>BACKEND ARCHITECTURE</h2>
               <div className="about-me-skills-loader"></div>
               <div className="about-me-skills-tools">
                 <div>Node</div>
@@ -541,6 +565,13 @@ export function Homepage() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div>
+        <div><p>PROJECTS</p></div>
+        <div>
+          
         </div>
       </div>
     </>
