@@ -1,12 +1,15 @@
 import "./Hompage.css";
 import CountUp from "./CountUp";
+import episilion_logo from "../assets/episilion_logo.jpg";
+import flexPay26 from '../assets/flexPay26.png'
+import classified from '../assets/classified.jpg'
 
 export function Homepage() {
   return (
     <>
       <div className="homepage-opening">
         <div className="homepage-opening-image">
-          <img src="./testiminial_1.jpg" alt="" />
+          <img src="./episilionLogo.jpg" alt="" />
         </div>
         <h2>EPISILION_SERVICES</h2>
         <div className="homepage-opening-description">
@@ -568,10 +571,190 @@ export function Homepage() {
         </div>
       </div>
 
-      <div>
-        <div><p>PROJECTS</p></div>
-        <div>
-          
+      <div className="about-me-projects-main-container">
+        <div className="about-me-projects-header">
+          <svg
+            xmlns="http://w3.org"
+            viewBox="0 0 100 100"
+            width="100"
+            height="100"
+          >
+            <path
+              d="M 18,26 L 38,26 L 46,36 L 82,36 L 82,78 L 18,78 Z"
+              fill="none"
+              stroke="white"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <line
+              x1="30"
+              y1="50"
+              x2="70"
+              y2="50"
+              stroke="white"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <line
+              x1="30"
+              y1="62"
+              x2="56"
+              y2="62"
+              stroke="white"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+          </svg>
+          <p>PROJECTS</p>
+        </div>
+        <div className="about-me-projects-container">
+          <div className="about-me-projects-card">
+            <div className="about-me-projects-image">
+              <img src={episilion_logo} alt="" />
+            </div>
+            <p className="about-me-projects-completed">COMPLETED</p>
+            <h2>EPISILION HOSTELS</h2>
+            <p className="about-me-projects-description">
+              A mobile-first platform designed to streamline hostel booking
+              and management for students and travelers.
+            </p>
+
+            <a className="about-me-projects-svg" href="https://www.episilionhostels.com/" target="_blank">
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+              >
+                <path
+                  d="M 46,24 L 24,24 L 24,76 L 76,76 L 76,54"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <line
+                  x1="46"
+                  y1="54"
+                  x2="74"
+                  y2="26"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M 58,24 L 76,24 L 76,42"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div className="about-me-projects-card">
+            <div className="about-me-projects-image">
+              <img src={flexPay26} alt="" />
+            </div>
+            <p className="about-me-projects-completed">COMPLETED</p>
+            <h2>FLEXPAY26</h2>
+            <p className="about-me-projects-description">
+              A freeFire reseller site, to set diamonds cheaply.
+            </p>
+
+            <a className="about-me-projects-svg" href="https://flexpay26.vercel.app/" target="_blank">
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+              >
+                <path
+                  d="M 46,24 L 24,24 L 24,76 L 76,76 L 76,54"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <line
+                  x1="46"
+                  y1="54"
+                  x2="74"
+                  y2="26"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M 58,24 L 76,24 L 76,42"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div className="about-me-projects-card">
+            <div className="about-me-projects-image">
+              <img src={classified} alt="" />
+            </div>
+            <p className="about-me-projects-completed" style={{ color: 'rgb(125, 37, 13)', backgroundColor:'rgba(255, 0, 0, 0.07)' }}>PENDING</p>
+            <h2 style={{ color: 'rgb(125, 37, 13)' }}>CLASSIFIED</h2>
+            <p className="about-me-projects-description">
+              Global decentralized asset management platform with real-time HUD
+              analytics.
+            </p>
+
+            <a className="about-me-projects-svg">
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+              >
+                <path
+                  d="M 46,24 L 24,24 L 24,76 L 76,76 L 76,54"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <line
+                  x1="46"
+                  y1="54"
+                  x2="74"
+                  y2="26"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M 58,24 L 76,24 L 76,42"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </>
