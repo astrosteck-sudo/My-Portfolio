@@ -176,6 +176,373 @@ export function Homepage() {
           </div>
         </div>
       </div>
+
+      
+      <div className="about-me-skills-main-container">
+        <h2 className="about-me-skills-header">SKILLS AND KNOWLEDGE</h2>
+        <div className="about-me-skills-container">
+          <div className="about-me-skills-hud-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="about-me-skills-wrapper">
+              <div className="about-me-skills-svg-and-number">
+                <svg
+                  xmlns="http://w3.org"
+                  viewBox="0 0 100 100"
+                  width="100"
+                  height="100"
+                >
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="12"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+
+                  <line
+                    x1="50"
+                    y1="38"
+                    x2="50"
+                    y2="24"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="50"
+                    cy="18"
+                    r="6"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+
+                  <line
+                    x1="61.4"
+                    y1="46.3"
+                    x2="74.7"
+                    y2="42.0"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="79.5"
+                    cy="40.4"
+                    r="6"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+
+                  <line
+                    x1="57.1"
+                    y1="59.7"
+                    x2="65.3"
+                    y2="71.1"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="68.2"
+                    cy="75.2"
+                    r="6"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+
+                  <line
+                    x1="42.9"
+                    y1="59.7"
+                    x2="34.7"
+                    y2="71.1"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="31.8"
+                    cy="75.2"
+                    r="6"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+
+                  <line
+                    x1="38.6"
+                    y1="46.3"
+                    x2="25.3"
+                    y2="42.0"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="20.5"
+                    cy="40.4"
+                    r="6"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                </svg>
+                <p>[01]</p>
+              </div>
+              <h2>FRONTEND ARCHITECTURE (Web)</h2>
+              <div className="about-me-skills-loader"></div>
+              <div className="about-me-skills-tools">
+                <div>React</div>
+                <div>Vite</div>
+                <div>Css</div>
+                <div>GitHub</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="about-me-skills-hud-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="about-me-skills-wrapper">
+              <div className="about-me-skills-svg-and-number">
+                <svg
+                  xmlns="http://w3.org"
+                  viewBox="0 0 100 100"
+                  width="100"
+                  height="100"
+                >
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="12"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+
+                  <line
+                    x1="50"
+                    y1="38"
+                    x2="50"
+                    y2="24"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="50"
+                    cy="18"
+                    r="6"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+
+                  <line
+                    x1="61.4"
+                    y1="46.3"
+                    x2="74.7"
+                    y2="42.0"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="79.5"
+                    cy="40.4"
+                    r="6"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+
+                  <line
+                    x1="57.1"
+                    y1="59.7"
+                    x2="65.3"
+                    y2="71.1"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="68.2"
+                    cy="75.2"
+                    r="6"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+
+                  <line
+                    x1="42.9"
+                    y1="59.7"
+                    x2="34.7"
+                    y2="71.1"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="31.8"
+                    cy="75.2"
+                    r="6"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+
+                  <line
+                    x1="38.6"
+                    y1="46.3"
+                    x2="25.3"
+                    y2="42.0"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="20.5"
+                    cy="40.4"
+                    r="6"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                </svg>
+                <p>[02]</p>
+              </div>
+              <h2>FRONTEND ARCHITECTURE (App)</h2>
+              <div className="about-me-skills-loader"></div>
+              <div className="about-me-skills-tools">
+                <div>Native</div>
+                <div>Expo</div>
+                <div>Css</div>
+                <div>GitHub</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="about-me-skills-hud-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="about-me-skills-wrapper">
+              <div className="about-me-skills-svg-and-number">
+                <svg
+                  xmlns="http://w3.org"
+                  viewBox="0 0 100 100"
+                  width="100"
+                  height="100"
+                >
+                  <path
+                    d="M 20,30 L 50,18 L 80,30 L 50,42 Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+
+                  <path
+                    d="M 20,48 L 50,60 L 80,48"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M 20,54 L 50,66 L 80,54"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+
+                  <path
+                    d="M 32,74 C 32,70 68,70 68,74 C 68,78 32,78 32,74"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                  />
+                  <path
+                    d="M 32,74 L 32,86 C 32,90 68,90 68,86 L 68,74"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <p>[03]</p>
+              </div>
+              <h2>BACKEND ARCHITECTURE (Web)</h2>
+              <div className="about-me-skills-loader"></div>
+              <div className="about-me-skills-tools">
+                <div>Node</div>
+                <div>Express</div>
+                <div>GitHub</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="about-me-skills-hud-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="about-me-skills-wrapper">
+              <div className="about-me-skills-svg-and-number">
+                <svg
+                  xmlns="http://w3.org"
+                  viewBox="0 0 100 100"
+                  width="100"
+                  height="100"
+                >
+                  <path
+                    d="M 25,30 C 25,20 75,20 75,30 C 75,40 25,40 25,30 Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+
+                  <path
+                    d="M 25,30 L 25,54 C 25,64 75,64 75,54 L 75,30"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M 25,54 C 25,44 75,44 75,54"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+
+                  <path
+                    d="M 25,54 L 25,78 C 25,88 75,88 75,78 L 75,54"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M 25,78 C 25,68 75,68 75,78"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <p>[04]</p>
+              </div>
+              <h2>DATABASE ARCHITECTURE</h2>
+              <div className="about-me-skills-loader"></div>
+              <div className="about-me-skills-tools">
+                <div>MySql</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

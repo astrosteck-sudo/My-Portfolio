@@ -5,6 +5,12 @@
   font-style: normal;
 }
 @font-face{
+  font-family: "Space-Grotesk-Light";
+  src: url(./font-Styles/Space_Grotesk/static/SpaceGrotesk-Light.ttf);
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face{
   font-family: "JetBrainsMono";
   src: url(./font-Styles/JetBrains_Mono//static/JetBrainsMono-Bold.ttf);
   font-weight: normal;
