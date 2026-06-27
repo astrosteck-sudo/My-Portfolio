@@ -143,7 +143,7 @@
     background: rgba(16, 16, 16, 0.85); /* fallback solid */
     border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    margin-top: 70px;
+    margin-top: 60px;
     position: fixed;
     z-index: 1;
     width: 100%;
