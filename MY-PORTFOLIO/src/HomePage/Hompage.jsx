@@ -57,7 +57,7 @@ export function Homepage() {
           <div class="corner top-left"></div>
           <div class="corner bottom-right"></div>
           <div className="hud-content">
-            <div className="hud-title">Expenses</div>
+            <div className="hud-title">Happy Clients</div>
             <CountUp target={100} prefix="" suffix="" />
           </div>
         </div>
