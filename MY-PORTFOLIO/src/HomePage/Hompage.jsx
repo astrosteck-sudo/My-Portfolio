@@ -38,7 +38,7 @@ export function Homepage() {
         <div className="hud-card">
           <div class="corner top-left"></div>
           <div class="corner bottom-right"></div>
-          <div className="hud-content">
+          <div className="hud-content" id="about">
             <div className="hud-title">Completed Projects</div>
             <CountUp target={2} />
           </div>
@@ -63,7 +63,7 @@ export function Homepage() {
         </div>
       </div>
 
-      <div className="about-me-container">
+      <div className="about-me-container" >
         <div className="about-me">
           <div className="about-me-header">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -173,7 +173,7 @@ export function Homepage() {
                 </svg>
               </div>
             </div>
-            <p className="about-me-other-descriptions-p">
+            <p className="about-me-other-descriptions-p" id="technologies">
               <p>Environment</p>
               <p>Vs Code,Expo</p>
             </p>
@@ -572,7 +572,7 @@ export function Homepage() {
         </div>
       </div>
 
-      <div className="about-me-episilion-services-container">
+      <div className="about-me-episilion-services-container" id="services">
         <div className="about-me-episilion-services-header">
           <svg
             xmlns="http://w3.org"
@@ -768,7 +768,7 @@ export function Homepage() {
         </div>
       </div>
 
-      <div className="about-me-team-container">
+      <div className="about-me-team-container" id="team">
         <div className="about-me-team-header">
           <svg
             xmlns="http://w3.org"
@@ -797,13 +797,13 @@ export function Homepage() {
 
             <div className="hud-content about-me-team-card-content">
               <img src="./testiminial_1.jpg" alt="" />
-              <p>Founder & Full-Stack Developer</p>
+              <p >Founder & Full-Stack Developer</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="about-me-projects-main-container">
+      <div className="about-me-projects-main-container" id="projects">
         <div className="about-me-projects-header">
           <svg
             xmlns="http://w3.org"
