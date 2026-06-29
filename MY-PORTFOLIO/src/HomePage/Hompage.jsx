@@ -1,8 +1,8 @@
 import "./Hompage.css";
 import CountUp from "./CountUp";
 import episilion_logo from "../assets/episilion_logo.jpg";
-import flexPay26 from '../assets/flexPay26.png'
-import classified from '../assets/classified.jpg'
+import flexPay26 from "../assets/flexPay26.png";
+import classified from "../assets/classified.jpg";
 
 export function Homepage() {
   return (
@@ -76,10 +76,12 @@ export function Homepage() {
             <p>IDENTITY ANALYSIS</p>
           </div>
           <p className="about-me-description">
-            Operating at the intersection of high-concurrency systems and
-            immersive front-end architecture. My core directive is the
-            translation of complex data into intuitive, high-performance
-            interfaces.
+            I'm a full-stack developer passionate about building scalable,
+            user-focused applications. I enjoy solving complex problems through
+            clean, efficient code and thoughtful system design. My experience
+            includes web development, mobile applications, backend development,
+            and AI integration. I strive to continuously improve my skills while
+            creating technology that delivers real value.
           </p>
 
           <div className="about-me-other-descriptions">
@@ -617,11 +619,15 @@ export function Homepage() {
             <p className="about-me-projects-completed">COMPLETED</p>
             <h2>EPISILION HOSTELS</h2>
             <p className="about-me-projects-description">
-              A mobile-first platform designed to streamline hostel booking
-              and management for students and travelers.
+              A mobile-first platform designed to streamline hostel booking and
+              management for students and travelers.
             </p>
 
-            <a className="about-me-projects-svg" href="https://www.episilionhostels.com/" target="_blank">
+            <a
+              className="about-me-projects-svg"
+              href="https://www.episilionhostels.com/"
+              target="_blank"
+            >
               <svg
                 xmlns="http://w3.org"
                 viewBox="0 0 100 100"
@@ -669,7 +675,11 @@ export function Homepage() {
               A freeFire reseller site, to set diamonds cheaply.
             </p>
 
-            <a className="about-me-projects-svg" href="https://flexpay26.vercel.app/" target="_blank">
+            <a
+              className="about-me-projects-svg"
+              href="https://flexpay26.vercel.app/"
+              target="_blank"
+            >
               <svg
                 xmlns="http://w3.org"
                 viewBox="0 0 100 100"
@@ -711,8 +721,16 @@ export function Homepage() {
             <div className="about-me-projects-image">
               <img src={classified} alt="" />
             </div>
-            <p className="about-me-projects-completed" style={{ color: 'rgb(125, 37, 13)', backgroundColor:'rgba(255, 0, 0, 0.07)' }}>PENDING</p>
-            <h2 style={{ color: 'rgb(125, 37, 13)' }}>CLASSIFIED</h2>
+            <p
+              className="about-me-projects-completed"
+              style={{
+                color: "rgb(125, 37, 13)",
+                backgroundColor: "rgba(255, 0, 0, 0.07)",
+              }}
+            >
+              PENDING
+            </p>
+            <h2 style={{ color: "rgb(125, 37, 13)" }}>CLASSIFIED</h2>
             <p className="about-me-projects-description">
               Global decentralized asset management platform with real-time HUD
               analytics.

@@ -296,7 +296,7 @@
 
 .about-me-description {
   font-family: Inter;
-  font-size: clamp(18px, 2vw, 20px);
+  font-size: clamp(15px, 2vw, 20px);
   font-weight: bold;
   /* Tight letter spacing to mimic the squished look */
   letter-spacing: -1px;
