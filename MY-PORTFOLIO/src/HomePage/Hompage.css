@@ -32,7 +32,6 @@
 }
 
 .homepage-opening-description {
-  border: solid red;
   border: solid rgba(255, 255, 255, 0.308) 0.2px;
   background-color: #0d0f14;
   display: flex;
@@ -131,9 +130,6 @@
   }
 }
 
-/* .short-description-container{
-  border: solid red;
-} */
 
 .short-description-container {
   display: grid;
@@ -154,7 +150,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: solid red;
 }
 
 /* Container to handle the dark grid background */
@@ -175,7 +170,9 @@
   padding-left: 150px;
   margin-top: 40px;
   display: flex;
+  gap: 2px;
   align-items: center;
+  /* border: solid red; */
 }
 .about-me-skills-header svg, .about-me-projects-header svg {
   width: 50px;
@@ -286,7 +283,7 @@
   background-clip: text;
   margin-bottom: 50px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 .about-me-header svg {
   width: 50px;
@@ -468,9 +465,20 @@ font-family: Inter;
   .about-me-skills-container{
     display: flex;
     flex-direction: column;
+    padding: 0;
   }
-  .about-me-container {
+  .about-me-skills-main-container{
     padding: 20px;
+  }
+  .about-me-container, .about-me-projects-main-container {
+    padding: 20px;
+  }
+  .about-me-projects-main-container{
+    padding-top: 0;
+  }
+  .about-me-projects-header{
+    /* border: solid red; */
+    margin: 0;
   }
   .about-me {
     width: 100%;
@@ -478,16 +486,24 @@ font-family: Inter;
   .about-me-header,
   .about-me-skills-header,
   .about-me-projects-header {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .about-me-header{
+    margin-bottom: 30px;
+  }
+  .about-me-header svg,
+  .about-me-skills-header svg,
+  .about-me-projects-header svg{
+    width: 25px;
   }
   .about-me-header svg {
     width: 20px;
   }
-  .about-me-skills-header, .about-me-projects-header {
-    padding-left: 30px;
-  }
   .about-me-projects-container{
     flex-direction: column;
+    margin: -20px;
   }
   .about-me-projects-card{
     width: 100%;
