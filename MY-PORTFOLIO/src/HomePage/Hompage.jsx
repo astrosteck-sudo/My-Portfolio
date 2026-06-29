@@ -13,7 +13,7 @@ export function Homepage() {
         </div>
         <h2>EPISILION_SERVICES</h2>
         <div className="homepage-opening-description">
-          <p>WEB AND APP DEVELOPER (UI/UX)</p>
+          <p>WEB AND APP DEVELOPMENT (UI/UX)</p>
           {/* <span class="cursor-pipe">|</span> */}
         </div>
 
