@@ -180,7 +180,8 @@
 
 /* The main box with the thin border */
 .hud-card,
-.about-me-skills-hud-card {
+.about-me-skills-hud-card,
+.about-me-episilion-services-card {
   position: relative;
   /* width: 300px;
   height: 100px; */
@@ -268,9 +269,11 @@
 
 .about-me-header,
 .about-me-skills-header,
-.about-me-projects-header {
+.about-me-projects-header,
+.about-me-episilion-services-header {
   font-family: Space-Grotesk;
   font-size: 2.5rem;
+
   /* Font styling to match the technical, geometric look */
   font-weight: 900;
   /* Tight letter spacing to mimic the squished look */
@@ -283,9 +286,10 @@
   background-clip: text;
   margin-bottom: 50px;
   display: flex;
+  align-items: center;
   gap: 10px;
 }
-.about-me-header svg {
+.about-me-header svg, .about-me-episilion-services-header svg {
   width: 50px;
 }
 
@@ -453,6 +457,43 @@ font-family: Inter;
   border: solid rgba(255, 0, 0, 0.126);
 }
 
+.about-me-episilion-services-container{
+  padding: 150px;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+.about-me-episilion-services-card-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}
+.about-me-episilion-services-card-content h2{
+  font-family: Space-Grotesk;
+  font-size: clamp(15px, 2vw, 15px);
+  /* Tight letter spacing to mimic the squished look */
+  letter-spacing: -1px;
+  /* The metallic text gradient effect */
+  background: linear-gradient(to bottom, #dbe9f6 0%, #a2b7ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.about-me-episilion-services-card-content p{
+  font-family: Inter;
+  font-size: clamp(13px, 2vw, 15px);
+}
+
+.about-me-episilion-services-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+
 @media only screen and (max-width: 992px) {
   .hud-container,
   .about-me-skills-container {
@@ -485,7 +526,8 @@ font-family: Inter;
   }
   .about-me-header,
   .about-me-skills-header,
-  .about-me-projects-header {
+  .about-me-projects-header,
+  .about-me-episilion-services-header {
     font-size: 1.2rem;
     padding: 10px;
     margin-bottom: 10px;
@@ -495,7 +537,8 @@ font-family: Inter;
   }
   .about-me-header svg,
   .about-me-skills-header svg,
-  .about-me-projects-header svg{
+  .about-me-projects-header svg,
+  .about-me-episilion-services-header svg{
     width: 25px;
   }
   .about-me-header svg {
@@ -507,6 +550,17 @@ font-family: Inter;
   }
   .about-me-projects-card{
     width: 100%;
+  }
+
+  .about-me-episilion-services-container{
+    padding: 10px;
+    padding-top: 50px;
+    
+  }
+  .about-me-episilion-services-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
   }
 
 }

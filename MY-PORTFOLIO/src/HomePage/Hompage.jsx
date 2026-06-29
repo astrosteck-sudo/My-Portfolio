@@ -58,7 +58,7 @@ export function Homepage() {
           <div class="corner bottom-right"></div>
           <div className="hud-content">
             <div className="hud-title">Expenses</div>
-            <CountUp target={1000} prefix="$" suffix="+" />
+            <CountUp target={100} prefix="" suffix="" />
           </div>
         </div>
       </div>
@@ -73,15 +73,14 @@ export function Homepage() {
               />
             </svg>
 
-            <p>IDENTITY ANALYSIS</p>
+            <p>ABOUT EPISILION SERVICES</p>
           </div>
           <p className="about-me-description">
-            I'm a full-stack developer passionate about building scalable,
-            user-focused applications. I enjoy solving complex problems through
-            clean, efficient code and thoughtful system design. My experience
-            includes web development, mobile applications, backend development,
-            and AI integration. I strive to continuously improve my skills while
-            creating technology that delivers real value.
+            Episilion Services is a software development company focused on
+            building modern web applications, mobile apps, and digital solutions
+            that help businesses and individuals achieve their goals. We
+            prioritize clean design, scalable architecture, and user-centered
+            experiences.
           </p>
 
           <div className="about-me-other-descriptions">
@@ -207,7 +206,7 @@ export function Homepage() {
               stroke-linejoin="round"
             />
           </svg>
-          <p>SKILLS AND KNOWLEDGE</p>
+          <p>TECHNOLOGIES</p>
         </h2>
         <div className="about-me-skills-container">
           <div className="about-me-skills-hud-card">
@@ -573,6 +572,202 @@ export function Homepage() {
         </div>
       </div>
 
+      <div className="about-me-episilion-services-container">
+        <div className="about-me-episilion-services-header">
+          <svg
+            xmlns="http://w3.org"
+            viewBox="0 0 24 24"
+            width="35"
+            height="35"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+          </svg>
+
+          <p>SERVICES PROTOCOLS</p>
+        </div>
+
+        <div className="about-me-episilion-services-wrapper">
+          <div className="about-me-episilion-services-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="about-me-episilion-services-card-content">
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="25"
+                height="25"
+                fill="none"
+                stroke="#a2b7ca"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              <h2>WEBSITE DEVELOPMENT</h2>
+              <p>
+                High-performance, responsive front-end architectures using
+                modern frameworks.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-me-episilion-services-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="about-me-episilion-services-card-content">
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                <line x1="12" y1="18" x2="12" y2="18.01" stroke-width="3" />
+              </svg>
+
+              <h2>MOBILE APP DEVELOPMENT</h2>
+              <p>
+                Cross-platform mobile solutions optimized for native
+                performance.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-me-episilion-services-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="about-me-episilion-services-card-content">
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="7 8 3 12 7 16" />
+                <polyline points="17 8 21 12 17 16" />
+                <line x1="10" y1="12" x2="10.01" y2="12" stroke-width="3" />
+                <line x1="12" y1="12" x2="12.01" y2="12" stroke-width="3" />
+                <line x1="14" y1="12" x2="14.01" y2="12" stroke-width="3" />
+              </svg>
+
+              <h2>BACKEND/API DEVELOPMENT</h2>
+              <p>Scalable server-side logic and robust API integrations.</p>
+            </div>
+          </div>
+
+          <div className="about-me-episilion-services-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="about-me-episilion-services-card-content">
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="6" y="7" width="12" height="11" rx="2" />
+
+                <path d="M12 7V4" />
+                <circle cx="12" cy="3" r="1" fill="currentColor" />
+
+                <path d="M6 10H4v5h2" />
+                <path d="M18 10h2v5h18" />
+
+                <circle cx="10" cy="12" r="1.5" fill="currentColor" />
+                <circle cx="14" cy="12" r="1.5" fill="currentColor" />
+              </svg>
+
+              <h2>AI INTEGRATION</h2>
+              <p>
+                Deploying neural networks and LLM-based features into existing
+                ecosystems.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-me-episilion-services-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="about-me-episilion-services-card-content">
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15a2 2 0 0 1-2 2H7A5 5 0 0 1 7 7a5.32 5.32 0 0 1 3.5 1.4A6 6 0 0 1 21 13.5v1.5z" />
+
+                <polyline points="9 13 12 10 15 13" />
+                <line x1="12" y1="10" x2="12" y2="17" />
+              </svg>
+
+              <h2>CLOUD DEPLOYMENT</h2>
+              <p>
+                High-performance, responsive front-end architectures using
+                modern frameworks.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-me-episilion-services-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="about-me-episilion-services-card-content">
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+
+              <h2>MAINTENANCE & SUPPORT</h2>
+              <p>Continuous monitoring, debugging, and system optimization.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="about-me-projects-main-container">
         <div className="about-me-projects-header">
           <svg
@@ -619,8 +814,8 @@ export function Homepage() {
             <p className="about-me-projects-completed">COMPLETED</p>
             <h2>EPISILION HOSTELS</h2>
             <p className="about-me-projects-description">
-              A mobile-first platform designed to streamline hostel booking and
-              management for students and travelers.
+              A platform designed to streamline hostel booking and management
+              for students and travelers.
             </p>
 
             <a
@@ -775,6 +970,7 @@ export function Homepage() {
           </div>
         </div>
       </div>
+      
     </>
   );
 }
