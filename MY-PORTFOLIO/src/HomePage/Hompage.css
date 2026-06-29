@@ -181,7 +181,8 @@
 /* The main box with the thin border */
 .hud-card,
 .about-me-skills-hud-card,
-.about-me-episilion-services-card {
+.about-me-episilion-services-card,
+.about-me-team-card {
   position: relative;
   /* width: 300px;
   height: 100px; */
@@ -270,7 +271,8 @@
 .about-me-header,
 .about-me-skills-header,
 .about-me-projects-header,
-.about-me-episilion-services-header {
+.about-me-episilion-services-header,
+.about-me-team-header {
   font-family: Space-Grotesk;
   font-size: 2.5rem;
 
@@ -289,7 +291,7 @@
   align-items: center;
   gap: 10px;
 }
-.about-me-header svg, .about-me-episilion-services-header svg {
+.about-me-header svg, .about-me-episilion-services-header svg, .about-me-team-header svg {
   width: 50px;
 }
 
@@ -494,9 +496,37 @@ font-family: Inter;
 }
 
 
+.about-me-team-container{
+  padding: 150px;
+  padding-bottom: 20px;
+}
+
+.about-me-team-wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+.about-me-team-card p{
+  font-family: Space-Grotesk-Light;
+  color: rgb(162, 183, 202);
+  text-align: center;
+  font-size: clamp(10px, 2vw, 13px);
+  margin-top: 10px;
+  font-weight: bolder;
+}
+.about-me-team-card img{
+  width: 25%;
+  height: 80px;
+  margin: auto;
+}
+.about-me-team-card-content{
+  padding: 30px;
+}
 @media only screen and (max-width: 992px) {
   .hud-container,
-  .about-me-skills-container {
+  .about-me-skills-container,
+  .about-me-team-container {
     padding: 10px;
     /* display: flex;
     flex-direction: column;
@@ -527,7 +557,8 @@ font-family: Inter;
   .about-me-header,
   .about-me-skills-header,
   .about-me-projects-header,
-  .about-me-episilion-services-header {
+  .about-me-episilion-services-header,
+  .about-me-team-header {
     font-size: 1.2rem;
     padding: 10px;
     margin-bottom: 10px;
@@ -538,7 +569,8 @@ font-family: Inter;
   .about-me-header svg,
   .about-me-skills-header svg,
   .about-me-projects-header svg,
-  .about-me-episilion-services-header svg{
+  .about-me-episilion-services-header svg,
+  .about-me-team-header svg{
     width: 25px;
   }
   .about-me-header svg {
@@ -561,6 +593,16 @@ font-family: Inter;
     display: flex;
     flex-direction: column;
     padding: 0;
+  }
+
+  .about-me-team-card img{
+    width: 100%;
+  }
+  .about-me-team-card-content{
+    padding: 2px;
+  }
+  .about-me-team-card{
+    width: 100%;
   }
 
 }

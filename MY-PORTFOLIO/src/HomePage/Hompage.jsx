@@ -768,6 +768,41 @@ export function Homepage() {
         </div>
       </div>
 
+      <div className="about-me-team-container">
+        <div className="about-me-team-header">
+          <svg
+            xmlns="http://w3.org"
+            viewBox="0 0 24 24"
+            width="35"
+            height="35"
+            fill="none"
+            stroke="#a2b7ca"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+          <p>TEAM MEMBERS</p>
+        </div>
+
+        <div className="about-me-team-wrapper">
+          <div className="about-me-team-card">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div className="hud-content about-me-team-card-content">
+              <img src="./testiminial_1.jpg" alt="" />
+              <p>Founder & Full-Stack Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="about-me-projects-main-container">
         <div className="about-me-projects-header">
           <svg
@@ -970,7 +1005,6 @@ export function Homepage() {
           </div>
         </div>
       </div>
-      
     </>
   );
 }
