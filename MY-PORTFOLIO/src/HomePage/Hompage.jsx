@@ -3,7 +3,6 @@ import CountUp from "./CountUp";
 import episilion_logo from "../assets/episilion_logo.jpg";
 import flexPay26 from "../assets/flexPay26.png";
 import classified from "../assets/classified.jpg";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export function Homepage() {
   return (
