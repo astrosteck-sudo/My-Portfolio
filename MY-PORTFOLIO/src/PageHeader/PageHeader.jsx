@@ -30,8 +30,7 @@ export function PageHeader() {
           <p onClick={() => smoothScroll("projects")}>Projects</p>
           <p onClick={() => smoothScroll("services")}>Services</p>
           <p onClick={() => smoothScroll("team")}>Team</p>
-          <p>Roadmap</p>
-          <p>Contact</p>
+          <p onClick={() => smoothScroll("contact")}>Contact</p>
         </div>
         <p className="episilion-services-header-resume">DOWNLOAD RESUME</p>
 
@@ -54,8 +53,7 @@ export function PageHeader() {
         <p onClick={() => smoothScroll("projects")}>Projects</p>
         <p onClick={() => smoothScroll("services")}>Services</p>
         <p onClick={() => smoothScroll("team")}>Team</p>
-        {/* <p>Roadmap</p>
-        <p>Contact</p> */}
+        <p onClick={() => smoothScroll("contact")}>Contact</p>
         <p className="episilion-services-header-mobile-resume">
           DOWNLOAD RESUME
         </p>

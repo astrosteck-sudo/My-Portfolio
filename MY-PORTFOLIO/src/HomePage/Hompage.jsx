@@ -3,6 +3,7 @@ import CountUp from "./CountUp";
 import episilion_logo from "../assets/episilion_logo.jpg";
 import flexPay26 from "../assets/flexPay26.png";
 import classified from "../assets/classified.jpg";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export function Homepage() {
   return (
@@ -63,7 +64,7 @@ export function Homepage() {
         </div>
       </div>
 
-      <div className="about-me-container" >
+      <div className="about-me-container">
         <div className="about-me">
           <div className="about-me-header">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -797,7 +798,7 @@ export function Homepage() {
 
             <div className="hud-content about-me-team-card-content">
               <img src="./testiminial_1.jpg" alt="" />
-              <p >Founder & Full-Stack Developer</p>
+              <p>Founder & Full-Stack Developer</p>
             </div>
           </div>
         </div>
@@ -1002,6 +1003,80 @@ export function Homepage() {
                 />
               </svg>
             </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="about-me-contacts-container" id="contact">
+        <div className="hud-card">
+          <div class="corner top-left"></div>
+          <div class="corner bottom-right"></div>
+          <div className="about-me-contacts">
+            <div className="about-me-contact-content">
+              <h2>SECURE CHANNEL</h2>
+              <p>
+                Direct encrypted communication. Response latency typically
+                before 24h.
+              </p>
+
+              <a
+                href="mailto:paulfoli122@gmail.com?subject=Portfolio Inquiry"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://w3.org"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgb(185 202 203)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <p>paulfoli122@gmail.com</p>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100093119115842"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://w3.org"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgb(185 202 203)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+                <p>Paul Deon Foli</p>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://w3.org"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgb(185 202 203)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <p>0551604818</p>
+              </a>
+            </div>
+
+            <iframe src="https://lottie.host/embed/854d2fb2-e5fa-4de7-8f99-f07bd883526a/u1gdSKQWqw.lottie"></iframe>
           </div>
         </div>
       </div>

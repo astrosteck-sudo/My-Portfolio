@@ -272,7 +272,8 @@
 .about-me-skills-header,
 .about-me-projects-header,
 .about-me-episilion-services-header,
-.about-me-team-header {
+.about-me-team-header,
+.about-me-contacts h2 {
   font-family: Space-Grotesk;
   font-size: 2.5rem;
 
@@ -523,6 +524,42 @@ font-family: Inter;
 .about-me-team-card-content{
   padding: 30px;
 }
+
+.about-me-contacts-container{
+  /* border: solid red; */
+  padding: 190px;
+}
+.about-me-contacts{
+  display: flex;
+  /* flex-direction: column; */
+  gap: 20px;
+  padding: 50px;
+  /* border: solid red; */
+}
+.about-me-contact-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+  /* border: solid red; */
+}
+iframe{
+  border: none;
+  width: 60%;
+}
+.about-me-contacts h2{
+  margin-bottom: 0;
+}
+.about-me-contacts a{
+  display: flex;
+  gap:  10px;
+  text-decoration: none;
+  align-items: center;
+}
+.about-me-contacts p{
+  font-family: Inter;
+  color: rgb(185 202 203 / var(--tw-text-opacity, 1));
+}
 @media only screen and (max-width: 992px) {
   .hud-container,
   .about-me-skills-container,
@@ -558,7 +595,8 @@ font-family: Inter;
   .about-me-skills-header,
   .about-me-projects-header,
   .about-me-episilion-services-header,
-  .about-me-team-header {
+  .about-me-team-header,
+  .about-me-contacts h2 {
     font-size: 1.2rem;
     padding: 10px;
     margin-bottom: 10px;
@@ -598,11 +636,20 @@ font-family: Inter;
   .about-me-team-card img{
     width: 100%;
   }
-  .about-me-team-card-content{
+  .about-me-team-card-content, .about-me-contact-content{
     padding: 2px;
+  }
+  iframe{
+    display: none;
   }
   .about-me-team-card{
     width: 100%;
+  }
+  .about-me-contacts-container{
+    padding: 10px;
+  }
+  .about-me-contacts h2{
+    padding: 0;
   }
 
 }
