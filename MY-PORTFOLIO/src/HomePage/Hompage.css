@@ -130,7 +130,6 @@
   }
 }
 
-
 .short-description-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 in a row on large screens */
@@ -166,7 +165,8 @@
   margin-bottom: 50px;
   margin-top: 80px;
 }
-.about-me-skills-header, .about-me-projects-header {
+.about-me-skills-header,
+.about-me-projects-header {
   padding-left: 150px;
   margin-top: 40px;
   display: flex;
@@ -174,9 +174,13 @@
   align-items: center;
   /* border: solid red; */
 }
-.about-me-skills-header svg, .about-me-projects-header svg {
+.headers-svg {
   width: 50px;
+  height: 50px;
 }
+/* .about-me-skills-header svg, .about-me-projects-header svg {
+  width: 50px;
+} */
 
 /* The main box with the thin border */
 .hud-card,
@@ -248,12 +252,14 @@
   }
 }
 
-
 /* Extra small screens: 1 in a row */
 @media (max-width: 480px) {
   .hud-container,
   .about-me-skills-container {
-    grid-template-columns: repeat(2,1fr); /* Keeps the 2x2 structure on tiny phones */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Keeps the 2x2 structure on tiny phones */
     gap: 15px; /* Optional: narrows gaps slightly so content fits on tiny screens */
   }
 }
@@ -292,9 +298,9 @@
   align-items: center;
   gap: 10px;
 }
-.about-me-header svg, .about-me-episilion-services-header svg, .about-me-team-header svg {
+/* .about-me-header svg, .about-me-episilion-services-header svg, .about-me-team-header svg {
   width: 50px;
-}
+} */
 
 .about-me-other-descriptions > div:first-child {
   width: 30px;
@@ -394,7 +400,7 @@
   font-size: clamp(10px, 2vw, 10px);
 }
 
-.about-me-projects-container{
+.about-me-projects-container {
   padding: 20px;
   display: flex;
   align-items: center;
@@ -402,29 +408,29 @@
   gap: 30px;
   flex-wrap: wrap;
 }
-.about-me-projects-header{
+.about-me-projects-header {
   margin-top: 120px;
 }
-.about-me-projects-card{
+.about-me-projects-card {
   border: solid rgba(92, 92, 94, 0.628) 1px;
   width: 27%;
-  background-color: #0f111a; 
+  background-color: #0f111a;
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-height: 450px;
   padding: 25px;
 }
-.about-me-projects-image{
+.about-me-projects-image {
   height: 230px;
   margin: -25px;
   margin-bottom: 5px;
 }
-.about-me-projects-image img{
+.about-me-projects-image img {
   width: 100%;
   height: 100%;
 }
-.about-me-projects-completed{
+.about-me-projects-completed {
   background-color: rgba(0, 128, 0, 0.139);
   color: green;
   width: 20%;
@@ -433,47 +439,47 @@
   font-size: clamp(10px, 2vw, 10px);
   font-family: Space-Grotesk-Light;
 }
-.about-me-projects-card h2{
+.about-me-projects-card h2 {
   font-size: clamp(15px, 2vw, 20px);
   font-family: Space-Grotesk-Semi-Bold;
   color: rgba(255, 255, 255, 0.728);
 }
 .about-me-projects-description {
-font-family: Inter;
+  font-family: Inter;
   color: rgba(255, 255, 255, 0.728);
   font-size: clamp(10px, 2vw, 15px);
 }
 
-.about-me-projects-svg{
+.about-me-projects-svg {
   height: 40px;
   display: flex;
   flex-direction: column;
   align-items: last baseline;
 }
-.about-me-projects-svg svg{
+.about-me-projects-svg svg {
   height: 100%;
   width: 10%;
 }
 
-.classified-name{
+.classified-name {
   color: rgb(125, 37, 13);
   border: solid rgba(255, 0, 0, 0.126);
 }
 
-.about-me-episilion-services-container{
+.about-me-episilion-services-container {
   padding: 150px;
   color: white;
   padding-top: 100px;
   padding-bottom: 0;
 }
 
-.about-me-episilion-services-card-content{
+.about-me-episilion-services-card-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 15px;
 }
-.about-me-episilion-services-card-content h2{
+.about-me-episilion-services-card-content h2 {
   font-family: Space-Grotesk;
   font-size: clamp(15px, 2vw, 15px);
   /* Tight letter spacing to mimic the squished look */
@@ -484,7 +490,7 @@ font-family: Inter;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.about-me-episilion-services-card-content p{
+.about-me-episilion-services-card-content p {
   font-family: Inter;
   font-size: clamp(13px, 2vw, 15px);
 }
@@ -496,19 +502,18 @@ font-family: Inter;
   padding: 40px;
 }
 
-
-.about-me-team-container{
+.about-me-team-container {
   padding: 150px;
-  padding-bottom: 20px;
+  margin-bottom: 100px;
 }
 
-.about-me-team-wrapper{
+.about-me-team-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 10px;
 }
-.about-me-team-card p{
+.about-me-team-card p {
   font-family: Space-Grotesk-Light;
   color: rgb(162, 183, 202);
   text-align: center;
@@ -516,51 +521,56 @@ font-family: Inter;
   margin-top: 10px;
   font-weight: bolder;
 }
-.about-me-team-card img{
+.about-me-team-card img {
   width: 25%;
   height: 80px;
   margin: auto;
 }
-.about-me-team-card-content{
+.about-me-team-card-content {
   padding: 30px;
 }
 
-.about-me-contacts-container{
+.about-me-contacts-container {
   /* border: solid red; */
   padding: 190px;
 }
-.about-me-contacts{
+.about-me-contacts {
   display: flex;
   /* flex-direction: column; */
   gap: 20px;
   padding: 50px;
   /* border: solid red; */
 }
-.about-me-contact-content{
+.about-me-contact-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 50px;
   /* border: solid red; */
 }
-iframe{
+iframe {
   border: none;
   width: 60%;
 }
-.about-me-contacts h2{
+.about-me-contacts h2 {
   margin-bottom: 0;
 }
-.about-me-contacts a{
+.about-me-contacts a {
   display: flex;
-  gap:  10px;
+  gap: 10px;
   text-decoration: none;
   align-items: center;
 }
-.about-me-contacts p{
+.about-me-contacts p {
   font-family: Inter;
   color: rgb(185 202 203 / var(--tw-text-opacity, 1));
+  font-size: clamp(13px, 2vw, 15px);
 }
 @media only screen and (max-width: 992px) {
+  .headers-svg {
+    width: 25px;
+    height: 25px;
+  }
   .hud-container,
   .about-me-skills-container,
   .about-me-team-container {
@@ -570,21 +580,22 @@ iframe{
     justify-content: center;
     align-items: center; */
   }
-  .about-me-skills-container{
+  .about-me-skills-container {
     display: flex;
     flex-direction: column;
     padding: 0;
   }
-  .about-me-skills-main-container{
+  .about-me-skills-main-container {
     padding: 20px;
   }
-  .about-me-container, .about-me-projects-main-container {
+  .about-me-container,
+  .about-me-projects-main-container {
     padding: 20px;
   }
-  .about-me-projects-main-container{
+  .about-me-projects-main-container {
     padding-top: 0;
   }
-  .about-me-projects-header{
+  .about-me-projects-header {
     /* border: solid red; */
     margin: 0;
   }
@@ -598,58 +609,63 @@ iframe{
   .about-me-team-header,
   .about-me-contacts h2 {
     font-size: 1.2rem;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  .about-me-header{
+    padding: 0px;
     margin-bottom: 30px;
   }
-  .about-me-header svg,
+  /* .about-me-header {
+    margin-bottom: 30px;
+  } */
+  /* .about-me-header svg,
   .about-me-skills-header svg,
   .about-me-projects-header svg,
   .about-me-episilion-services-header svg,
   .about-me-team-header svg{
-    width: 25px;
-  }
-  .about-me-header svg {
+    width: 15px;
+  } */
+  /* .about-me-header svg {
     width: 20px;
-  }
-  .about-me-projects-container{
+  } */
+  .about-me-projects-container {
     flex-direction: column;
     margin: -20px;
   }
-  .about-me-projects-card{
+  .about-me-projects-card {
     width: 100%;
   }
 
-  .about-me-episilion-services-container{
+  .about-me-episilion-services-container {
     padding: 10px;
     padding-top: 50px;
-    
+    margin-bottom: 100px;
   }
-  .about-me-episilion-services-wrapper{
+  .about-me-episilion-services-wrapper {
     display: flex;
     flex-direction: column;
     padding: 0;
   }
-
-  .about-me-team-card img{
-    width: 100%;
+  .about-me-team-wrapper {
+    display: flex;
+    flex-direction: column;
   }
-  .about-me-team-card-content, .about-me-contact-content{
+
+  .about-me-team-card img {
+    width: 40%;
+  }
+  .about-me-team-card-content,
+  .about-me-contact-content {
     padding: 2px;
   }
-  iframe{
+  iframe {
     display: none;
   }
-  .about-me-team-card{
+  .about-me-team-card {
     width: 100%;
+    padding: 20px;
   }
-  .about-me-contacts-container{
+  .about-me-contacts-container {
     padding: 10px;
   }
-  .about-me-contacts h2{
+  .about-me-contacts h2 {
     padding: 0;
   }
-
 }
