@@ -1,0 +1,55 @@
+.sitefooter {
+  padding: 30px;
+  background-color: #0f111a;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: solid rgb(122, 119, 119) .5px;
+}
+.sitefooter h2 {
+  font-family: Space-Grotesk;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+
+  /* Font styling to match the technical, geometric look */
+  font-weight: 900;
+  /* Tight letter spacing to mimic the squished look */
+  letter-spacing: -1px;
+
+  /* The metallic text gradient effect */
+  background: linear-gradient(to bottom, #dbe9f6 0%, #a2b7ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+}
+.sitefooter p{
+    font-family: JetBrainsMonoLight;
+    color: grey;
+    font-size: clamp(10px, 2vw, 15px);
+}
+
+.sitefooter-contacts{
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+}
+.sitefooter-contacts a{
+    color: rgb(188, 184, 184);
+    font-size: clamp(10px, 2vw, 15px);
+    text-decoration: none;
+    font-family: JetBrainsMonoLight;
+}
+
+@media only screen and (max-width: 992px){
+    .sitefooter{
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 50px;
+        justify-content: first baseline;
+        /* align-items: first baseline; */
+    }
+}
