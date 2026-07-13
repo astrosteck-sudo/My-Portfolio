@@ -1,17 +1,20 @@
-
+import RiserLanding from './Riser/riser-landing'
 import './App.css'
 import { Homepage } from './HomePage/Hompage'
-import { PageHeader } from './PageHeader/PageHeader'
-import { SiteFooter } from './SiteFooter/SiteFooter'
+import { Routes, Route } from 'react-router-dom'
+
 
 function App() {
- 
-
   return (
     <>
-      <PageHeader/>
-      <Homepage/>
-      <SiteFooter/>
+      
+
+      <Routes>
+        <Route path="/" element={<Homepage/>} />
+        <Route path="/riser-landing" element={<RiserLanding/>} />
+      </Routes>
+
+      
     </>
   )
 }
