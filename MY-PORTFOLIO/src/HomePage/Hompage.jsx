@@ -5,6 +5,7 @@ import flexPay26 from "../assets/flexPay26.png";
 import riserLogo from "../assets/riserLogo.png";
 import { PageHeader } from "../PageHeader/PageHeader";
 import { SiteFooter } from "../SiteFooter/SiteFooter";
+import { Link } from "react-router-dom";
 
 export function Homepage() {
   return (
@@ -979,10 +980,9 @@ export function Homepage() {
               earners across Ghana and West Africa.
             </p>
 
-            <a
+            <Link
               className="about-me-projects-svg"
-              href="/riser-landing"
-              target="_blank"
+              to="/riser-landing"
             >
               <svg
                 xmlns="http://w3.org"
@@ -1018,7 +1018,7 @@ export function Homepage() {
                   stroke-linejoin="round"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
