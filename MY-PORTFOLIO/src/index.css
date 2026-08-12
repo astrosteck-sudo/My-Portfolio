@@ -5,8 +5,24 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   color-scheme: light;
+
+  /* ---- DESIGN TOKENS ---- */
+  --bg: #08090d;
+  --panel: #0d0f14;
+  --panel-2: #11141b;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.2);
+  --text: #e6edf5;
+  --muted: #8b96a5;
+  --accent: #00f2ff;
+  --accent-dim: rgba(0, 242, 255, 0.14);
+  --metal: linear-gradient(to bottom, #dbe9f6 0%, #a2b7ca 100%);
+  --header-h: 64px;
+  --max: 1180px;
+  --mono: JetBrainsMonoLight, ui-monospace, monospace;
+  --display: Space-Grotesk, system-ui, sans-serif;
 }
 
 html, body {
@@ -43,8 +59,8 @@ body {
 
 html {
   scroll-padding-top: 70px; /* equal to your header height */
+  scroll-behavior: smooth;
 }
-
 
 img {
   max-width: 100%;
@@ -75,11 +91,9 @@ img {
   -webkit-text-stroke: 1px black;
   text-stroke: 1px black;
 }
-html{
-  scroll-behavior: smooth;
-}
 
 /* 
+
 .body-bg {
   background-image: url('../images/hostel-images/hostel_image_2.jpg');
   background-repeat: no-repeat;
@@ -88,3 +102,55 @@ html{
   background-attachment: fixed;
   transition: opacity 1s ease-in-out;
 } */
+
+/* ---- TOKEN UTILITIES ---- */
+.metal-text {
+  background: var(--metal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shell { 
+  width: 100%; 
+  max-width: var(--max); 
+  margin: 0 auto; 
+  padding: 0 20px; 
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-title {
+  font-family: var(--display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: clamp(24px, 4vw, 38px);
+  margin-top: 8px;
+}
+
+.panel {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02), transparent),
+    var(--panel);
+  border: 1px solid var(--line);
+}
+
+.panel::before,
+.panel::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--accent);
+}
+
+.panel::before { top: -1px; left: -1px; border-width: 1px 0 0 1px; }
+.panel::after { bottom: -1px; right: -1px; border-width: 0 1px 1px 0; }
