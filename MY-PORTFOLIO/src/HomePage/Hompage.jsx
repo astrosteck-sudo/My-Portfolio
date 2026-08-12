@@ -70,24 +70,24 @@ const PROJECTS = [
   {
     image: riserLogo,
     name: "Riser",
-    status: "COMPLETED",
+    status: "IN PROGRESS",
     body: "Micro-task and payouts app for creators — mobile money integration and instant payouts.",
     stack: "React Native · Expo · Supabase",
     link: '/riser-landing'
   },
-  {
-    image: flexPay26,
-    name: "FlexPay 26",
-    status: "COMPLETED",
-    body: "Flexible payment tracking platform with dashboards and automated reminders.",
-    stack: "React · Node · PostgreSQL",
-    link: '/'
-  },
+  // {
+  //   image: flexPay26,
+  //   name: "FlexPay 26",
+  //   status: "COMPLETED",
+  //   body: "Flexible payment tracking platform with dashboards and automated reminders.",
+  //   stack: "React · Node · PostgreSQL",
+  //   link: '/'
+  // },
   {
     image: episilion_logo,
     name: "Episilion Hostels",
-    status: "IN PROGRESS",
-    body: "The studio site you are reading — HUD-inspired interface with live counters.",
+    status: "COMPLETED",
+    body: "A student hostel platform for discovering, comparing, and finding suitable hostels around UPSA campus.",
     stack: "React · Vite · CSS",
     link: 'https://www.episilionhostels.com/'
   },
@@ -151,8 +151,8 @@ export function Homepage() {
               <div className="piano-roll">
                 <span className="note long" />
                 <span className="note short" />
-                <span className="note long" />
                 <span className="note short" />
+                <span className="note long" />
               </div>
             </div>
 
