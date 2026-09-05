@@ -42,7 +42,18 @@
   .site-footer-base { flex-direction: column; gap: 8px; }
   .site-footer-status { margin-top: 8px; }
 }
-@media (max-width: 640px) {
-  .site-footer-inner { padding: 48px 20px 32px; }
-  .site-footer-brand h2 { font-size: 24px; }
+
+@media (max-width: 768px) {
+  .site-footer-inner { padding: 56px 20px 40px; }
+  .site-footer-brand h2 { font-size: 26px; }
+  .site-footer-brand p { font-size: 13px; }
+  .site-footer-links a { font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .site-footer-inner { padding: 48px 16px 32px; }
+  .site-footer-brand h2 { font-size: 22px; }
+  .site-footer-brand p { font-size: 12px; }
+  .site-footer-status { font-size: 11px; padding: 10px 14px; }
+  .site-footer-base p { font-size: 10px; }
 }

@@ -3,8 +3,9 @@ import CountUp from "./CountUp";
 import { PageHeader } from "../PageHeader/PageHeader";
 import { SiteFooter } from "../SiteFooter/SiteFooter";
 import episilion_logo from "../assets/episilion_logo.jpg";
-import flexPay26 from "../assets/flexPay26.png";
 import riserLogo from "../assets/riserLogo.png";
+// Add your team image to src/assets/ and uncomment the line below:
+// import paulImage from "../assets/testiminial_1.jpg";
 import { Link } from "react-router-dom";
 import { ContactForm } from "./ContactForm";
 import { ScrollReveal } from "./ScrollReveal";
@@ -303,7 +304,15 @@ export function Homepage() {
           <div className="team-grid">
             <ScrollReveal delay={100}>
               <div className="panel team-card">
-                <span className="team-avatar">PF</span>
+                <div className="team-avatar">
+                  {/* To add Paul's image: 
+                      1. Place testiminial_1.jpg in src/assets/ folder
+                      2. Uncomment the import at top: import paulImage from "../assets/testiminial_1.jpg";
+                      3. Uncomment the img tag below and remove the fallback span
+                  */}
+                  {/* <img src={paulImage} alt="Paul Deon Foli" /> */}
+                  <span className="team-avatar-initials">PF</span>
+                </div>
                 <div>
                   <h3>Paul Deon Foli</h3>
                   <span className="eyebrow">Founder · Full-stack Engineer</span>

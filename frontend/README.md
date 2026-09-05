@@ -40,8 +40,18 @@ The site features a "Refined Tech Professional" aesthetic:
 - **Clean, confident design** with generous whitespace and deliberate visual hierarchy
 - **Subtle animations** and micro-interactions for enhanced UX
 - **Glassmorphism effects** on navigation and panels
-- **Responsive design** optimized for mobile-first experience
+- **Mobile-first responsive design** with intentional layouts at all breakpoints
 - **Removed** generic grid/scanline backgrounds in favor of subtle gradients
+
+### Mobile-First Responsiveness
+
+The site is designed mobile-first with responsive breakpoints:
+- **480px and below**: Extra small phones - single column layouts, reduced padding
+- **768px and below**: Tablets/small phones - adjusted typography and spacing
+- **992px and below**: Laptops/tablets - grid adjustments and layout shifts
+- **Above 992px**: Desktop - full multi-column layouts
+
+All components are tested and optimized for mobile viewing with proper touch targets and readable text sizes.
 
 ## Project Structure
 
@@ -177,7 +187,7 @@ See `backend/README.md` for detailed backend deployment instructions.
 
 ## Key Features
 
-- **Responsive Design**: Mobile-first approach with intentional mobile layouts
+- **Mobile-First Responsive Design**: Optimized for all screen sizes with intentional layouts at each breakpoint
 - **Smooth Animations**: Scroll reveal animations and micro-interactions
 - **Functional Contact Form**: With client-side validation and backend email forwarding
 - **Rate Limiting**: Protection against form spam
