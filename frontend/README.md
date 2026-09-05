@@ -210,7 +210,7 @@ See `backend/README.md` for detailed backend deployment instructions.
 
 ## Contact Form Configuration
 
-The contact form requires a properly configured backend to function. The backend uses Nodemailer to send form submissions to `paulfoli122@gmail.com`. 
+The contact form requires a properly configured backend to function. The backend uses Nodemailer to send form submissions to `episilionservices@gmail.com`. 
 
 **Important:** You must configure email credentials in the backend `.env` file before the contact form will work. See `backend/.env.example` for detailed instructions on setting up Gmail App Passwords or alternative email services like Resend.
 

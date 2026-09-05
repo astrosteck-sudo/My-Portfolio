@@ -83,7 +83,7 @@ app.post('/api/contact', contactLimiter, validateContactForm, async (req, res) =
       from: 'onboarding@resend.dev',
       // Sandbox mode only delivers to the email address the Resend
       // account itself is registered under — must match exactly.
-      to: 'paulfoli122@gmail.com',
+      to: 'episilionservices@gmail.com',
       subject: `[Episilion Portfolio] ${subject}`,
       text: `
 New contact form submission from Episilion Services portfolio:
