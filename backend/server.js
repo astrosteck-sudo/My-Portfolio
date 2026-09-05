@@ -1,5 +1,5 @@
 import express from 'express';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import cors from 'cors';
@@ -10,6 +10,8 @@ dotenv.config();
 const app = express();
 app.set("trust proxy", 1)
 const PORT = process.env.PORT || 3000;
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Security middleware
 app.use(helmet());
@@ -73,20 +75,14 @@ app.post('/api/contact', contactLimiter, validateContactForm, async (req, res) =
   try {
     const { name, email, subject, message, budget } = req.body;
 
-    // Create email transporter
-    const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: process.env.EMAIL_PORT || 587,
-      secure: process.env.EMAIL_SECURE === 'true', // true for 465, false for other ports
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    // Email content
-    const mailOptions = {
-      from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
+    // Send email via Resend's HTTP API (not SMTP — Render's free tier
+    // blocks outbound SMTP ports 25/465/587, but HTTPS/443 is unaffected)
+    const { data, error } = await resend.emails.send({
+      // Sandbox sender — we don't have a verified custom domain yet.
+      // Must stay exactly this value until a domain is verified in Resend.
+      from: 'onboarding@resend.dev',
+      // Sandbox mode only delivers to the email address the Resend
+      // account itself is registered under — must match exactly.
       to: 'paulfoli122@gmail.com',
       subject: `[Episilion Portfolio] ${subject}`,
       text: `
@@ -115,10 +111,16 @@ This message was sent from the Episilion Services portfolio contact form.
           <p style="color: #888; font-size: 12px;">This message was sent from the Episilion Services portfolio contact form.</p>
         </div>
       `,
-    };
+    });
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+    if (error) {
+      console.error('Resend API error:', error);
+      return res.status(500).json({
+        error: 'Failed to send message. Please try again later.'
+      });
+    }
+
+    console.log('Email sent via Resend, id:', data?.id);
 
     res.status(200).json({ 
       success: true, 
