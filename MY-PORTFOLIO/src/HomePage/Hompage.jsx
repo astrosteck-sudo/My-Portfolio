@@ -6,6 +6,8 @@ import episilion_logo from "../assets/episilion_logo.jpg";
 import flexPay26 from "../assets/flexPay26.png";
 import riserLogo from "../assets/riserLogo.png";
 import { Link } from "react-router-dom";
+import { ContactForm } from "./ContactForm";
+import { ScrollReveal } from "./ScrollReveal";
 
 const STATS = [
   { title: "Projects", target: 3 },
@@ -17,19 +19,19 @@ const STATS = [
 const STACK = [
   {
     name: "Frontend",
-    level: 100,
-    tools: "React · Vite · TanStack · Tailwind · CSS3",
+    icon: "⚛",
+    tools: ["React", "Vite", "TanStack", "Tailwind", "CSS3"],
   },
-  { name: "Mobile", level: 65, tools: "React Native · Expo · EAS Build" },
+  { name: "Mobile", icon: "📱", tools: ["React Native", "Expo", "EAS Build"] },
   {
     name: "Backend",
-    level: 100,
-    tools: "Node · Express · Supabase · PostgreSQL",
+    icon: "⚙",
+    tools: ["Node", "Express", "Supabase", "PostgreSQL"],
   },
   {
     name: "Design",
-    level: 95,
-    tools: "Figma · UI systems · Motion · Prototyping",
+    icon: "🎨",
+    tools: ["Figma", "UI Systems", "Motion", "Prototyping"],
   },
 ];
 
@@ -119,7 +121,7 @@ export function Homepage() {
               <span className="eyebrow">Accra, Ghana · Est. 2024</span>
               <h1>
                 <span className="metal-text">WE BUILD</span>
-                <span className="hero-outline">DIGITAL</span>
+                <span className="hero-outline" data-text="DIGITAL">DIGITAL</span>
                 <span className="metal-text">PRODUCTS</span>
               </h1>
               <p className="hero-lead">
@@ -168,123 +170,149 @@ export function Homepage() {
 
         {/* STATS */}
         <section className="stats shell">
-          {STATS.map((s) => (
-            <div className="stat panel" key={s.title}>
-              <span className="stat-title">{s.title}</span>
-              <CountUp target={s.target} suffix={s.suffix || ""} />
-            </div>
+          {STATS.map((s, index) => (
+            <ScrollReveal key={s.title} delay={index * 100}>
+              <div className="stat panel">
+                <span className="stat-title">{s.title}</span>
+                <CountUp target={s.target} suffix={s.suffix || ""} />
+              </div>
+            </ScrollReveal>
           ))}
         </section>
 
         {/* ABOUT */}
         <section className="about shell" id="about">
-          <SectionHead
-            index="01"
-            eyebrow="Who we are"
-            title="ABOUT THE STUDIO"
-          />
+          <ScrollReveal>
+            <SectionHead
+              index="01"
+              eyebrow="Who we are"
+              title="ABOUT THE STUDIO"
+            />
+          </ScrollReveal>
           <div className="about-grid">
-            <p className="about-lead">
-              We design and build software end to end. One engineer, one
-              designer, no layers of hand-off — which means fewer meetings and
-              faster releases.
-            </p>
+            <ScrollReveal delay={100}>
+              <p className="about-lead">
+                We design and build software end to end. One engineer, one
+                designer, no layers of hand-off — which means fewer meetings and
+                faster releases.
+              </p>
+            </ScrollReveal>
             <div className="about-cards">
-              <div className="panel about-card">
-                <span className="eyebrow">Approach</span>
-                <p>
-                  Every project starts with the interface. We prototype the real
-                  screens early so decisions are made on something you can
-                  click.
-                </p>
-              </div>
-              <div className="panel about-card">
-                <span className="eyebrow">Delivery</span>
-                <p>
-                  Weekly builds, previews you can open on your phone, and code
-                  you own outright at the end of the engagement.
-                </p>
-              </div>
+              <ScrollReveal delay={200}>
+                <div className="panel about-card">
+                  <span className="eyebrow">Approach</span>
+                  <p>
+                    Every project starts with the interface. We prototype the real
+                    screens early so decisions are made on something you can
+                    click.
+                  </p>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={300}>
+                <div className="panel about-card">
+                  <span className="eyebrow">Delivery</span>
+                  <p>
+                    Weekly builds, previews you can open on your phone, and code
+                    you own outright at the end of the engagement.
+                  </p>
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </section>
 
         {/* STACK */}
         <section className="stack shell" id="technologies">
-          <SectionHead index="02" eyebrow="Capabilities" title="TECHNOLOGIES" />
+          <ScrollReveal>
+            <SectionHead index="02" eyebrow="Capabilities" title="TECHNOLOGIES" />
+          </ScrollReveal>
           <div className="stack-grid">
-            {STACK.map((s) => (
-              <div className="panel stack-card" key={s.name}>
-                <div className="stack-card-top">
-                  <span className="stack-card-name">{s.name}</span>
-                  <span className="stack-card-level">{s.level}%</span>
+            {STACK.map((s, index) => (
+              <ScrollReveal key={s.name} delay={index * 100}>
+                <div className="panel stack-card">
+                  <div className="stack-card-header">
+                    <span className="stack-icon">{s.icon}</span>
+                    <span className="stack-card-name">{s.name}</span>
+                  </div>
+                  <div className="stack-tools">
+                    {s.tools.map((tool) => (
+                      <span key={tool} className="tech-chip">{tool}</span>
+                    ))}
+                  </div>
                 </div>
-                <div className="stack-bar">
-                  <span style={{ width: `${s.level}%` }} />
-                </div>
-                <p className="stack-tools">{s.tools}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </section>
 
         {/* SERVICES */}
         <section className="services shell" id="services">
-          <SectionHead index="03" eyebrow="What we do" title="SERVICES" />
+          <ScrollReveal>
+            <SectionHead index="03" eyebrow="What we do" title="SERVICES" />
+          </ScrollReveal>
           <div className="services-grid">
-            {SERVICES.map((s) => (
-              <article className="panel service-card" key={s.code}>
-                <span className="service-code">{s.code}</span>
-                <h3>{s.title}</h3>
-                <p>{s.body}</p>
-              </article>
+            {SERVICES.map((s, index) => (
+              <ScrollReveal key={s.code} delay={index * 100}>
+                <article className="panel service-card">
+                  <span className="service-code">{s.code}</span>
+                  <h3>{s.title}</h3>
+                  <p>{s.body}</p>
+                </article>
+              </ScrollReveal>
             ))}
           </div>
         </section>
 
         {/* PROJECTS */}
         <section className="projects shell" id="projects">
-          <SectionHead index="04" eyebrow="Selected work" title="PROJECTS" />
+          <ScrollReveal>
+            <SectionHead index="04" eyebrow="Selected work" title="PROJECTS" />
+          </ScrollReveal>
           <div className="projects-grid">
-            {PROJECTS.map((p) => (
-              <Link
-                to={p.link}
-                className="panel project-card"
-                key={p.name}
-                style={{ textDecoration: "none" }}
-              >
-                <div className="project-image">
-                  <img src={p.image} alt={p.name} />
-                  <span
-                    className={`project-status ${p.status === "COMPLETED" ? "done" : "wip"}`}
-                  >
-                    {p.status}
-                  </span>
-                </div>
-                <div className="project-body">
-                  <h3>{p.name}</h3>
-                  <p>{p.body}</p>
-                  <span className="project-stack">{p.stack}</span>
-                </div>
-              </Link>
+            {PROJECTS.map((p, index) => (
+              <ScrollReveal key={p.name} delay={index * 100}>
+                <Link
+                  to={p.link}
+                  className="panel project-card"
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="project-image">
+                    <img src={p.image} alt={p.name} />
+                    <span
+                      className={`project-status ${p.status === "COMPLETED" ? "done" : "wip"}`}
+                    >
+                      {p.status}
+                    </span>
+                  </div>
+                  <div className="project-body">
+                    <h3>{p.name}</h3>
+                    <p>{p.body}</p>
+                    <span className="project-stack">{p.stack}</span>
+                  </div>
+                </Link>
+              </ScrollReveal>
             ))}
           </div>
         </section>
 
         {/* TEAM */}
         <section className="team shell" id="team">
-          <SectionHead index="05" eyebrow="The people" title="TEAM" />
+          <ScrollReveal>
+            <SectionHead index="05" eyebrow="The people" title="TEAM" />
+          </ScrollReveal>
           <div className="team-grid">
-            <div className="panel team-card">
-              <span className="team-avatar">PF</span>
-              <div>
-                <h3>Paul Deon Foli</h3>
-                <span className="eyebrow">Founder · Full-stack Engineer</span>
-                <p>
-                  React, React Native and Node. Builds the product and ships it.
-                </p>
+            <ScrollReveal delay={100}>
+              <div className="panel team-card">
+                <span className="team-avatar">PF</span>
+                <div>
+                  <h3>Paul Deon Foli</h3>
+                  <span className="eyebrow">Founder · Full-stack Engineer</span>
+                  <p>
+                    React, React Native and Node. Builds the product and ships it.
+                  </p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
             {/* <div className="panel team-card">
               <span className="team-avatar">ES</span>
               <div>
@@ -298,30 +326,9 @@ export function Homepage() {
 
         {/* CONTACT */}
         <section className="contact shell" id="contact">
-          <div className="panel contact-card">
-            <span className="eyebrow">Open for work</span>
-            <h2 className="metal-text">HAVE SOMETHING TO BUILD?</h2>
-            <p>
-              Send a short brief — what it is, who it's for, and when you need
-              it live. You'll get a reply within 24 hours.
-            </p>
-            <div className="contact-actions">
-              <a
-                className="btn btn-solid"
-                href="mailto:episilionservices@gmail.com"
-              >
-                EMAIL US
-              </a>
-              <a
-                className="btn btn-ghost"
-                href="https://wa.me/@episilionservices"
-                target="_blank"
-                rel="noreferrer"
-              >
-                WHATSAPP
-              </a>
-            </div>
-          </div>
+          <ScrollReveal>
+            <ContactForm />
+          </ScrollReveal>
         </section>
       </main>
 

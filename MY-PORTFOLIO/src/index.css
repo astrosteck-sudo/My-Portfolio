@@ -6,23 +6,24 @@
 }
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
   /* ---- DESIGN TOKENS ---- */
-  --bg: #08090d;
-  --panel: #0d0f14;
-  --panel-2: #11141b;
-  --line: rgba(255, 255, 255, 0.09);
-  --line-strong: rgba(255, 255, 255, 0.2);
-  --text: #e6edf5;
-  --muted: #8b96a5;
-  --accent: #00f2ff;
-  --accent-dim: rgba(0, 242, 255, 0.14);
-  --metal: linear-gradient(to bottom, #dbe9f6 0%, #a2b7ca 100%);
-  --header-h: 64px;
-  --max: 1180px;
-  --mono: JetBrainsMonoLight, ui-monospace, monospace;
-  --display: Space-Grotesk, system-ui, sans-serif;
+  --bg: #0a0f1a;
+  --panel: #111827;
+  --panel-2: #1f2937;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.15);
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #00d4ff;
+  --accent-dim: rgba(0, 212, 255, 0.1);
+  --accent-hover: rgba(0, 212, 255, 0.15);
+  --metal: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
+  --header-h: 70px;
+  --max: 1200px;
+  --mono: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --display: 'Space Grotesk', system-ui, sans-serif;
 }
 
 html, body {
@@ -35,25 +36,11 @@ body {
   margin: 0;
   min-height: 100vh;
   
-  /* 1. Base dark theme background color */
-  background-color: #0f111a; 
-
-  /* 2. Grid lines + CRT scanline texture layered together */
+  /* Subtle gradient background */
+  background: var(--bg);
   background-image: 
-    /* Horizontal scanlines */
-    linear-gradient(rgba(18, 24, 38, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-    /* Vertical grid lines */
-    linear-gradient(90deg, rgba(255, 255, 255, 0.032) 1px, transparent 1px),
-    /* Horizontal grid lines */
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-
-  /* 3. Sizing the textures */
-  background-size: 
-    100% 4px,    /* Scanline pattern repeats every 4px vertically */
-    40px 40px,   /* Grid squares are 40px wide */
-    40px 40px;   /* Grid squares are 40px high */
-
-  /* 4. Fixes the background in place so content scrolls over it */
+    radial-gradient(ellipse at top, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(0, 212, 255, 0.02) 0%, transparent 50%);
   background-attachment: fixed;
 }
 
@@ -137,20 +124,19 @@ img {
 
 .panel {
   position: relative;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.02), transparent),
-    var(--panel);
+  background: var(--panel);
   border: 1px solid var(--line);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
 }
 
-.panel::before,
-.panel::after {
+.panel::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
-  border: 1px solid var(--accent);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+  opacity: 0.5;
 }
-
-.panel::before { top: -1px; left: -1px; border-width: 1px 0 0 1px; }
-.panel::after { bottom: -1px; right: -1px; border-width: 0 1px 1px 0; }
