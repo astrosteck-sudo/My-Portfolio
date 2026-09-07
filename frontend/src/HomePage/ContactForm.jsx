@@ -188,11 +188,11 @@ export function ContactForm() {
                 disabled={isSubmitting}
               >
                 <option value="">Select budget range</option>
-                <option value="$500-$1,000">$500 - $1,000</option>
-                <option value="$1,000-$3,000">$1,000 - $3,000</option>
-                <option value="$3,000-$5,000">$3,000 - $5,000</option>
-                <option value="$5,000-$10,000">$5,000 - $10,000</option>
-                <option value="$10,000+">$10,000+</option>
+                <option value="$500-$1,000">₵500 - ₵ 1,000</option>
+                <option value="$1,000-$3,000">₵1,000 - ₵ 3,000</option>
+                <option value="$3,000-$5,000">₵3,000 - ₵ 5,000</option>
+                <option value="$5,000-$10,000">₵5,000 - ₵ 10,000</option>
+                <option value="$10,000+">₵10,000+</option>
                 <option value="Not sure">Not sure yet</option>
               </select>
             </div>
