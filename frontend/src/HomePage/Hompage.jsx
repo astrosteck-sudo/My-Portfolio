@@ -3,7 +3,6 @@ import CountUp from "./CountUp";
 import { PageHeader } from "../PageHeader/PageHeader";
 import { SiteFooter } from "../SiteFooter/SiteFooter";
 import episilion_logo from "../assets/episilion_logo.jpg";
-import riserLogo from "../assets/riserLogo.png";
 // Add your team image to src/assets/ and uncomment the line below:
 // import paulImage from "../assets/testiminial_1.jpg";
 import { Link } from "react-router-dom";
@@ -71,10 +70,10 @@ const SERVICES = [
 
 const PROJECTS = [
   {
-    image: riserLogo,
+    image: '/riser_rebrand.png',
     name: "Riser",
     status: "IN PROGRESS",
-    body: "Micro-task and payouts app for creators — mobile money integration and instant payouts.",
+    body: "A TikTok analytics platform that turns a creator's public profile and content data into a clear, actionable verdict on their audience quality and marketing value — so brands know who's actually worth partnering with before they pay.",
     stack: "React Native · Expo · Supabase",
     link: '/riser-landing'
   },
