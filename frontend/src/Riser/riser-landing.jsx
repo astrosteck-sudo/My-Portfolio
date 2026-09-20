@@ -1,4 +1,16 @@
-import { TrendingUp, ShieldCheck, ChevronRight, BarChart3, Users, Zap, Target, Eye, Heart, MessageCircle, Play } from "lucide-react";
+import {
+  TrendingUp,
+  ShieldCheck,
+  ChevronRight,
+  BarChart3,
+  Users,
+  Zap,
+  Target,
+  Eye,
+  Heart,
+  MessageCircle,
+  Play,
+} from "lucide-react";
 
 /* ---------------------------------------------------------
    DESIGN TOKENS
@@ -17,11 +29,19 @@ const T = {
   inkFaint: "rgba(43,36,28,0.4)",
 };
 
-const shadowOut = "8px 8px 18px rgba(120,95,60,0.22), -8px -8px 18px rgba(255,255,255,0.9)";
-const shadowOutSm = "5px 5px 10px rgba(120,95,60,0.2), -5px -5px 10px rgba(255,255,255,0.9)";
-const shadowIn = "inset 5px 5px 10px rgba(120,95,60,0.22), inset -5px -5px 10px rgba(255,255,255,0.85)";
+const shadowOut =
+  "8px 8px 18px rgba(120,95,60,0.22), -8px -8px 18px rgba(255,255,255,0.9)";
+const shadowOutSm =
+  "5px 5px 10px rgba(120,95,60,0.2), -5px -5px 10px rgba(255,255,255,0.9)";
+const shadowIn =
+  "inset 5px 5px 10px rgba(120,95,60,0.22), inset -5px -5px 10px rgba(255,255,255,0.85)";
 
-function clayStyle({ bg = T.clay, radius = 24, shadow = shadowOut, extra = {} } = {}) {
+function clayStyle({
+  bg = T.clay,
+  radius = 24,
+  shadow = shadowOut,
+  extra = {},
+} = {}) {
   return { background: bg, borderRadius: radius, boxShadow: shadow, ...extra };
 }
 
@@ -31,9 +51,26 @@ function clayStyle({ bg = T.clay, radius = 24, shadow = shadowOut, extra = {} } 
 --------------------------------------------------------- */
 function AnalyticsScreen() {
   return (
-    <div style={{ padding: "18px 16px 24px", display: "flex", flexDirection: "column", gap: 14 }}>
+    <div
+      className="no-scrollbar"
+      style={{
+        padding: "18px 16px 24px",
+        display: "flex",
+        flexDirection: "column",
+        gap: 14,
+        // Native React inline styles for Firefox and IE:
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
+      }}
+    >
       {/* Header with creator profile */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           <div
             style={{
@@ -43,7 +80,14 @@ function AnalyticsScreen() {
               background: `linear-gradient(135deg, ${T.blue}, ${T.blueDeep})`,
             }}
           />
-          <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 16, color: T.blue }}>
+          <div
+            style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontWeight: 800,
+              fontSize: 16,
+              color: T.blue,
+            }}
+          >
             Riser
           </div>
         </div>
@@ -62,8 +106,21 @@ function AnalyticsScreen() {
       </div>
 
       {/* Creator profile card */}
-      <div style={clayStyle({ bg: T.clayLight, radius: 20, extra: { padding: "16px" } })}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
+      <div
+        style={clayStyle({
+          bg: T.clayLight,
+          radius: 20,
+          extra: { padding: "16px" },
+        })}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 12,
+            marginBottom: 14,
+          }}
+        >
           <div
             style={{
               width: 48,
@@ -81,24 +138,72 @@ function AnalyticsScreen() {
             @
           </div>
           <div>
-            <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 15, color: T.ink }}>
+            <div
+              style={{
+                fontFamily: "'Baloo 2', sans-serif",
+                fontWeight: 800,
+                fontSize: 15,
+                color: T.ink,
+              }}
+            >
               @creative_studio
             </div>
-            <div style={{ fontSize: 11, color: T.inkFaint, marginTop: 2 }}>Lifestyle & Fashion Creator</div>
+            <div style={{ fontSize: 11, color: T.inkFaint, marginTop: 2 }}>
+              Lifestyle & Fashion Creator
+            </div>
           </div>
         </div>
-        <div style={{ display: "flex", justifyContent: "space-between", textAlign: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            textAlign: "center",
+          }}
+        >
           <div>
-            <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 16, color: T.ink }}>125.4K</div>
-            <div style={{ fontSize: 10, color: T.inkFaint, fontWeight: 600 }}>Followers</div>
+            <div
+              style={{
+                fontFamily: "'Baloo 2', sans-serif",
+                fontWeight: 800,
+                fontSize: 16,
+                color: T.ink,
+              }}
+            >
+              125.4K
+            </div>
+            <div style={{ fontSize: 10, color: T.inkFaint, fontWeight: 600 }}>
+              Followers
+            </div>
           </div>
           <div>
-            <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 16, color: T.ink }}>892</div>
-            <div style={{ fontSize: 10, color: T.inkFaint, fontWeight: 600 }}>Following</div>
+            <div
+              style={{
+                fontFamily: "'Baloo 2', sans-serif",
+                fontWeight: 800,
+                fontSize: 16,
+                color: T.ink,
+              }}
+            >
+              892
+            </div>
+            <div style={{ fontSize: 10, color: T.inkFaint, fontWeight: 600 }}>
+              Following
+            </div>
           </div>
           <div>
-            <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 16, color: T.ink }}>2.1M</div>
-            <div style={{ fontSize: 10, color: T.inkFaint, fontWeight: 600 }}>Likes</div>
+            <div
+              style={{
+                fontFamily: "'Baloo 2', sans-serif",
+                fontWeight: 800,
+                fontSize: 16,
+                color: T.ink,
+              }}
+            >
+              2.1M
+            </div>
+            <div style={{ fontSize: 10, color: T.inkFaint, fontWeight: 600 }}>
+              Likes
+            </div>
           </div>
         </div>
       </div>
@@ -111,10 +216,26 @@ function AnalyticsScreen() {
           extra: { padding: "16px", textAlign: "center" },
         })}
       >
-        <div style={{ fontSize: 10, color: "rgba(255,255,255,0.85)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+        <div
+          style={{
+            fontSize: 10,
+            color: "rgba(255,255,255,0.85)",
+            fontWeight: 700,
+            textTransform: "uppercase",
+            letterSpacing: "0.05em",
+          }}
+        >
           Audience Strength
         </div>
-        <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 36, color: "#FFF", marginTop: 4 }}>
+        <div
+          style={{
+            fontFamily: "'Baloo 2', sans-serif",
+            fontWeight: 800,
+            fontSize: 36,
+            color: "#FFF",
+            marginTop: 4,
+          }}
+        >
           87
         </div>
         <div
@@ -136,23 +257,63 @@ function AnalyticsScreen() {
       </div>
 
       {/* AI Insight */}
-      <div style={clayStyle({ bg: T.clayLight, radius: 20, extra: { padding: "14px" } })}>
-        <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8 }}>
+      <div
+        style={clayStyle({
+          bg: T.clayLight,
+          radius: 20,
+          extra: { padding: "14px" },
+        })}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
+            marginBottom: 8,
+          }}
+        >
           <Zap size={14} color={T.blueDeep} strokeWidth={2.4} />
-          <div style={{ fontSize: 12, fontWeight: 700, color: T.inkSoft }}>AI Insight</div>
+          <div style={{ fontSize: 12, fontWeight: 700, color: T.inkSoft }}>
+            AI Insight
+          </div>
         </div>
         <div style={{ fontSize: 12, color: T.ink, lineHeight: 1.5 }}>
-          This creator's average video reaches ~70% of their follower count, indicating a highly engaged audience suitable for brand partnerships.
+          This creator's average video reaches ~70% of their follower count,
+          indicating a highly engaged audience suitable for brand partnerships.
         </div>
       </div>
 
       {/* Engagement Trend */}
-      <div style={clayStyle({ bg: T.clayLight, radius: 20, extra: { padding: "14px" } })}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
-          <div style={{ fontSize: 12, fontWeight: 700, color: T.inkSoft }}>Engagement Trend</div>
-          <div style={{ fontSize: 11, color: T.blueDeep, fontWeight: 600 }}>Last 30 days</div>
+      <div
+        style={clayStyle({
+          bg: T.clayLight,
+          radius: 20,
+          extra: { padding: "14px" },
+        })}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: 10,
+          }}
+        >
+          <div style={{ fontSize: 12, fontWeight: 700, color: T.inkSoft }}>
+            Engagement Trend
+          </div>
+          <div style={{ fontSize: 11, color: T.blueDeep, fontWeight: 600 }}>
+            Last 30 days
+          </div>
         </div>
-        <div style={{ display: "flex", alignItems: "flex-end", gap: 6, height: 60 }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+            gap: 6,
+            height: 60,
+          }}
+        >
           {[40, 65, 45, 80, 55, 90, 70, 85, 60, 95, 75, 88].map((height, i) => (
             <div
               key={i}
@@ -169,12 +330,36 @@ function AnalyticsScreen() {
       </div>
 
       {/* Best Performing Content */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginTop: 2 }}>
-        <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 700, fontSize: 14, color: T.ink }}>Top Content</div>
-        <div style={{ fontSize: 11.5, color: T.inkFaint, fontWeight: 600 }}>View all</div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "baseline",
+          marginTop: 2,
+        }}
+      >
+        <div
+          style={{
+            fontFamily: "'Baloo 2', sans-serif",
+            fontWeight: 700,
+            fontSize: 14,
+            color: T.ink,
+          }}
+        >
+          Top Content
+        </div>
+        <div style={{ fontSize: 11.5, color: T.inkFaint, fontWeight: 600 }}>
+          View all
+        </div>
       </div>
 
-      <div style={clayStyle({ bg: T.clayLight, radius: 20, extra: { padding: "12px" } })}>
+      <div
+        style={clayStyle({
+          bg: T.clayLight,
+          radius: 20,
+          extra: { padding: "12px" },
+        })}
+      >
         <div style={{ display: "flex", gap: 10 }}>
           <div
             style={{
@@ -191,10 +376,25 @@ function AnalyticsScreen() {
             <Play size={20} color={T.inkSoft} strokeWidth={2.2} />
           </div>
           <div style={{ flex: 1 }}>
-            <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 700, fontSize: 12, color: T.ink, marginBottom: 4 }}>
+            <div
+              style={{
+                fontFamily: "'Baloo 2', sans-serif",
+                fontWeight: 700,
+                fontSize: 12,
+                color: T.ink,
+                marginBottom: 4,
+              }}
+            >
               Summer Fashion Haul 2024
             </div>
-            <div style={{ display: "flex", gap: 12, fontSize: 10.5, color: T.inkFaint }}>
+            <div
+              style={{
+                display: "flex",
+                gap: 12,
+                fontSize: 10.5,
+                color: T.inkFaint,
+              }}
+            >
               <span style={{ display: "flex", alignItems: "center", gap: 3 }}>
                 <Eye size={11} strokeWidth={2.4} /> 342K
               </span>
@@ -224,7 +424,8 @@ function PhoneMockup() {
         margin: "0 auto",
         borderRadius: 46,
         background: `linear-gradient(155deg, #2a2a2a, #0a0a0a)`,
-        boxShadow: "16px 16px 34px rgba(120,95,60,0.28), -14px -14px 30px rgba(255,255,255,0.95)",
+        boxShadow:
+          "16px 16px 34px rgba(120,95,60,0.28), -14px -14px 30px rgba(255,255,255,0.95)",
         padding: 10,
         position: "relative",
       }}
@@ -258,7 +459,17 @@ function PhoneMockup() {
           }}
         />
         {/* status bar */}
-        <div style={{ display: "flex", justifyContent: "space-between", padding: "16px 20px 4px", fontSize: 11, fontWeight: 700, color: T.ink, fontFamily: "'Baloo 2', sans-serif" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "16px 20px 4px",
+            fontSize: 11,
+            fontWeight: 700,
+            color: T.ink,
+            fontFamily: "'Baloo 2', sans-serif",
+          }}
+        >
           <span>9:41</span>
           <span>●●● 5G 🔋</span>
         </div>
@@ -268,8 +479,21 @@ function PhoneMockup() {
           </div>
         </div>
         {/* home indicator */}
-        <div style={{ display: "flex", justifyContent: "center", padding: "6px 0 10px" }}>
-          <div style={{ width: 110, height: 4, borderRadius: 4, background: "rgba(43,36,28,0.25)" }} />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            padding: "6px 0 10px",
+          }}
+        >
+          <div
+            style={{
+              width: 110,
+              height: 4,
+              borderRadius: 4,
+              background: "rgba(43,36,28,0.25)",
+            }}
+          />
         </div>
       </div>
     </div>
@@ -303,10 +527,20 @@ function FeatureCard({ icon, title, body }) {
       >
         {icon}
       </div>
-      <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 17, color: T.ink, marginBottom: 6 }}>
+      <div
+        style={{
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
+          fontWeight: 700,
+          fontSize: 17,
+          color: T.ink,
+          marginBottom: 6,
+        }}
+      >
         {title}
       </div>
-      <div style={{ fontSize: 13.5, color: T.inkSoft, lineHeight: 1.55 }}>{body}</div>
+      <div style={{ fontSize: 13.5, color: T.inkSoft, lineHeight: 1.55 }}>
+        {body}
+      </div>
     </div>
   );
 }
@@ -338,8 +572,24 @@ export default function RiserLanding() {
       `}</style>
 
       {/* NAV */}
-      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "26px 24px 0", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: 22, color: T.ink }}>
+      <div
+        style={{
+          maxWidth: 1080,
+          margin: "0 auto",
+          padding: "26px 24px 0",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div
+          style={{
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
+            fontWeight: 800,
+            fontSize: 22,
+            color: T.ink,
+          }}
+        >
           riser<span style={{ color: T.blue }}>.</span>
         </div>
         <div
@@ -395,11 +645,23 @@ export default function RiserLanding() {
               letterSpacing: "-0.01em",
             }}
           >
-            Know who's worth<br />
+            Know who's worth
+            <br />
             the <span style={{ color: T.blue }}>partnership.</span>
           </h1>
-          <p style={{ fontSize: 16.5, color: T.inkSoft, lineHeight: 1.6, maxWidth: 440, margin: "0 0 28px" }}>
-            Riser analyzes a creator's public TikTok data — followers, engagement, content performance, and growth trends — to surface an audience-quality verdict. Stop guessing before you pay for promotion.
+          <p
+            style={{
+              fontSize: 16.5,
+              color: T.inkSoft,
+              lineHeight: 1.6,
+              maxWidth: 440,
+              margin: "0 0 28px",
+            }}
+          >
+            Riser analyzes a creator's public TikTok data — followers,
+            engagement, content performance, and growth trends — to surface an
+            audience-quality verdict. Stop guessing before you pay for
+            promotion.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <button
@@ -407,7 +669,11 @@ export default function RiserLanding() {
               style={{
                 border: "none",
                 cursor: "pointer",
-                ...clayStyle({ bg: `linear-gradient(135deg, ${T.blue}, ${T.blueDeep})`, radius: 16, shadow: shadowOut }),
+                ...clayStyle({
+                  bg: `linear-gradient(135deg, ${T.blue}, ${T.blueDeep})`,
+                  radius: 16,
+                  shadow: shadowOut,
+                }),
                 padding: "14px 24px",
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 700,
@@ -425,7 +691,11 @@ export default function RiserLanding() {
               style={{
                 border: "none",
                 cursor: "pointer",
-                ...clayStyle({ bg: T.clayLight, radius: 16, shadow: shadowOut }),
+                ...clayStyle({
+                  bg: T.clayLight,
+                  radius: 16,
+                  shadow: shadowOut,
+                }),
                 padding: "14px 24px",
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 700,
@@ -438,13 +708,18 @@ export default function RiserLanding() {
           </div>
         </div>
 
-        <div style={{ flex: "1 1 320px", minWidth: 280 }} className="riser-reveal">
+        <div
+          style={{ flex: "1 1 320px", minWidth: 280 }}
+          className="riser-reveal"
+        >
           <PhoneMockup />
         </div>
       </div>
 
       {/* FEATURES */}
-      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "24px 24px 70px" }}>
+      <div
+        style={{ maxWidth: 1080, margin: "0 auto", padding: "24px 24px 70px" }}
+      >
         <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
           <FeatureCard
             icon={<Users size={20} color={T.blueDeep} strokeWidth={2.4} />}

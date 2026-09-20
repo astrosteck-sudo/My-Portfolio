@@ -70,12 +70,12 @@ const SERVICES = [
 
 const PROJECTS = [
   {
-    image: '/riser_rebrand.png',
+    image: "/riser_rebrand.png",
     name: "Riser",
     status: "IN PROGRESS",
     body: "A TikTok analytics platform that turns a creator's public profile and content data into a clear, actionable verdict on their audience quality and marketing value — so brands know who's actually worth partnering with before they pay.",
-    stack: "React Native · Expo · Supabase",
-    link: '/riser-landing'
+    stack: "React Native · Expo · PostGre",
+    link: "/riser-landing",
   },
   // {
   //   image: flexPay26,
@@ -90,8 +90,8 @@ const PROJECTS = [
     name: "Episilion Hostels",
     status: "COMPLETED",
     body: "A student hostel platform for discovering, comparing, and finding suitable hostels around UPSA campus.",
-    stack: "React · Vite · CSS",
-    link: 'https://www.episilionhostels.com/'
+    stack: "React · Vite · CSS · MySQL",
+    link: "https://www.episilionhostels.com/",
   },
 ];
 
@@ -118,10 +118,12 @@ export function Homepage() {
         <section className="hero">
           <div className="hero-grid shell">
             <div className="hero-copy">
-              <span className="eyebrow">Accra, Ghana · Est. 2024</span>
+              <span className="eyebrow">Accra, Ghana · Est. 2026</span>
               <h1>
                 <span className="metal-text">WE BUILD</span>
-                <span className="hero-outline" data-text="DIGITAL">DIGITAL</span>
+                <span className="hero-outline" data-text="DIGITAL">
+                  DIGITAL
+                </span>
                 <span className="metal-text">PRODUCTS</span>
               </h1>
               <p className="hero-lead">
@@ -202,9 +204,9 @@ export function Homepage() {
                 <div className="panel about-card">
                   <span className="eyebrow">Approach</span>
                   <p>
-                    Every project starts with the interface. We prototype the real
-                    screens early so decisions are made on something you can
-                    click.
+                    Every project starts with the interface. We prototype the
+                    real screens early so decisions are made on something you
+                    can click.
                   </p>
                 </div>
               </ScrollReveal>
@@ -224,7 +226,11 @@ export function Homepage() {
         {/* STACK */}
         <section className="stack shell" id="technologies">
           <ScrollReveal>
-            <SectionHead index="02" eyebrow="Capabilities" title="TECHNOLOGIES" />
+            <SectionHead
+              index="02"
+              eyebrow="Capabilities"
+              title="TECHNOLOGIES"
+            />
           </ScrollReveal>
           <div className="stack-grid">
             {STACK.map((s, index) => (
@@ -236,7 +242,9 @@ export function Homepage() {
                   </div>
                   <div className="stack-tools">
                     {s.tools.map((tool) => (
-                      <span key={tool} className="tech-chip">{tool}</span>
+                      <span key={tool} className="tech-chip">
+                        {tool}
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -270,7 +278,32 @@ export function Homepage() {
           </ScrollReveal>
           <div className="projects-grid">
             {PROJECTS.map((p, index) => (
-              <ScrollReveal key={p.name} delay={index * 100}>
+              <div className="project-card">
+                <ScrollReveal key={p.name} delay={index * 100}>
+                  <Link
+                    to={p.link}
+                    className="panel"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <div className="project-image">
+                      <img src={p.image} alt={p.name} />
+                      <span
+                        className={`project-status ${p.status === "COMPLETED" ? "done" : "wip"}`}
+                      >
+                        {p.status}
+                      </span>
+                    </div>
+                    <div className="project-body">
+                      <h3>{p.name}</h3>
+                      <p>{p.body}</p>
+                      <span className="project-stack">{p.stack}</span>
+                    </div>
+                  </Link>
+                </ScrollReveal>
+              </div>
+            ))}
+
+            {/* <ScrollReveal key={p.name} delay={index * 100}>
                 <Link
                   to={p.link}
                   className="panel project-card"
@@ -290,8 +323,7 @@ export function Homepage() {
                     <span className="project-stack">{p.stack}</span>
                   </div>
                 </Link>
-              </ScrollReveal>
-            ))}
+              </ScrollReveal> */}
           </div>
         </section>
 
@@ -316,7 +348,8 @@ export function Homepage() {
                   <h3>Paul Deon Foli</h3>
                   <span className="eyebrow">Founder · Full-stack Engineer</span>
                   <p>
-                    React, React Native and Node. Builds the product and ships it.
+                    React, React Native and Node. Builds the product and ships
+                    it.
                   </p>
                 </div>
               </div>
