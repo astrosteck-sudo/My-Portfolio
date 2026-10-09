@@ -1,37 +1,33 @@
-@font-face{
-  font-family: "Space-Grotesk";
-  src: url(./font-Styles/Space_Grotesk/static/SpaceGrotesk-Bold.ttf);
-  font-weight: bolder;
+/* Self-hosted variable fonts — no external requests, no layout shift. */
+
+@font-face {
+  font-family: "Inter";
+  src: url(./font-Styles/Inter/Inter-VariableFont_opsz,wght.ttf) format("truetype-variations");
+  font-weight: 100 900;
   font-style: normal;
-}
-@font-face{
-  font-family: "Space-Grotesk-Light";
-  src: url(./font-Styles/Space_Grotesk/static/SpaceGrotesk-Light.ttf);
-  font-weight: bolder;
-  font-style: normal;
-}
-@font-face{
-  font-family: "Space-Grotesk-Semi-Bold";
-  src: url(./font-Styles/Space_Grotesk/static/SpaceGrotesk-SemiBold.ttf);
-  font-weight: bolder;
-  font-style: normal;
-}
-@font-face{
-  font-family: "JetBrainsMono";
-  src: url(./font-Styles/JetBrains_Mono//static/JetBrainsMono-Bold.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face{
-  font-family: "JetBrainsMonoLight";
-  src: url(./font-Styles/JetBrains_Mono/static/JetBrainsMono-Light.ttf);
-  font-weight: normal;
-  font-style: normal;
+  font-display: swap;
 }
 
-@font-face{
+@font-face {
   font-family: "Inter";
-  src: url(./font-Styles/Inter/static/Inter_24pt-Light.ttf);
-  font-weight: normal;
+  src: url(./font-Styles/Inter/Inter-Italic-VariableFont_opsz,wght.ttf) format("truetype-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url(./font-Styles/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf) format("truetype-variations");
+  font-weight: 300 700;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(./font-Styles/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf) format("truetype-variations");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
 }
