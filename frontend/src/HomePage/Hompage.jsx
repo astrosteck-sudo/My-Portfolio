@@ -583,15 +583,7 @@ export function Homepage() {
                       <Download aria-hidden="true" />
                       Download résumé
                     </a>
-                    <a
-                      className="btn btn--ghost"
-                      href="https://github.com/astrosteck-sudo?tab=repositories"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      View GitHub
-                      <ArrowUpRight aria-hidden="true" />
-                    </a>
+                    
                   </div>
                 </div>
               </article>

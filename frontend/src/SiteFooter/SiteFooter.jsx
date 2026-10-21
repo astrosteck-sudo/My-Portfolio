@@ -2,7 +2,6 @@ import { ArrowUpRight, Mail, MapPin } from "lucide-react";
 import "./SiteFooter.css";
 
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/astrosteck-sudo?tab=repositories" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/paul-foli-320ba1400" },
   { label: "Facebook", href: "https://web.facebook.com/people/Paul-Foli/pfbid0Vgdbo3npmMbV3JKYqtDYCe1bjQwHJSCDG8aWPCTi8pkC3HEzWQxdJNSNxmWMi4Bml/" },
 ];
