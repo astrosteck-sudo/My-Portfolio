@@ -31,6 +31,7 @@ import { Reveal } from "../components/Reveal";
 import CountUp from "../components/CountUp";
 import { ContactForm } from "./ContactForm";
 import episilionAdmins from "../assets/Designer.png";
+import importPlug from "../assets/import-plugFyler.jpeg";
 import episilionLogo from "../assets/episilion_logo.jpg";
 import "./Homepage.css";
 
@@ -38,7 +39,7 @@ const RESUME = "/Paul_Deon_Foli_Resume-2 (1).pdf";
 
 const STATS = [
   { label: "Products shipped", target: 3, suffix: "" },
-  { label: "Platforms live", target: 2, suffix: "" },
+  { label: "Platforms live", target: 3, suffix: "" },
   { label: "Deployments", target: 500, suffix: "+" },
   { label: "Client satisfaction", target: 100, suffix: "%" },
 ];
@@ -98,7 +99,7 @@ const STACK = [
   {
     icon: Layers,
     name: "Frontend",
-    tools: ["React", "Vite", "React Router", "TanStack Query", "Tailwind CSS", "CSS3"],
+    tools: ["React", "Vite", "React Router", "TanStack Query", "Tailwind CSS"],
   },
   {
     icon: MonitorSmartphone,
@@ -129,13 +130,13 @@ const STACK = [
 
 const PROJECTS = [
   {
-    image: "/riser_rebrand.png",
-    name: "Riser",
-    status: "In progress",
-    tone: "wip",
-    body: "A creator-analytics platform that turns a public TikTok profile into a clear verdict on audience quality and marketing value — so brands know who is worth partnering with before they pay.",
-    stack: ["React Native", "Expo", "PostgreSQL"],
-    link: "/riser-landing",
+    image: importPlug,
+    name: "Import Plug",
+    status: "Completed",
+    tone: "done",
+    body: "Import Plug is a web-based platform for purchasing products and requesting, sourcing, and tracking imported products.",
+    stack: ["React", "Cloudflare", "Node.js"],
+    link: "https://import-plug.vercel.app/",
     external: false,
   },
   {
